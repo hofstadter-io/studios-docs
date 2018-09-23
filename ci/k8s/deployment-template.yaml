@@ -1,0 +1,57 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hof-documentation-website
+  namespace: websites
+  labels:
+    app: hof-documentation-website
+    version: __TAG__
+spec:
+  selector:
+    matchLabels:
+      app: hof-documentation-website
+      namespace: websites
+
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+  minReadySeconds: 5
+
+  template:
+    metadata:
+      labels:
+        app: hof-documentation-website
+        namespace: websites
+    spec:
+      containers:
+      - name: website
+        image: gcr.io/hof-io--system/docs.hofstadter.io:__TAG__
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 80
+          protocol: "TCP"
+
+        resources:
+          requests:
+            memory: "32Mi"
+            cpu: "50m"
+          limits:
+            memory: "256Mi"
+            cpu: "250m"
+
+        readinessProbe:
+          httpGet:
+            port: 80
+          initialDelaySeconds: 6
+          failureThreshold: 3
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            port: 80
+          initialDelaySeconds: 6
+          failureThreshold: 3
+          periodSeconds: 10
+
+

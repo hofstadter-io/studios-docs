@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hof-documentation-website
+  namespace: websites
+  labels:
+    app: hof-documentation-website
+spec:
+  selector:
+    app: hof-documentation-website
+    namespace: websites
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: 80

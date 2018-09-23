@@ -1,0 +1,26 @@
+steps:
+
+- name: gcr.io/cloud-builders/curl
+  entrypoint: 'bash'
+  args: [ '-c', 'cat config.toml | sed -e "s/__TAG__/$TAG_NAME/" > config.toml']
+
+- name: 'gcr.io/hof-io--system/hugo'
+  args: ['--baseURL', 'https://docs.hofstadter.io', '-d', 'dist']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'build', '-t', 'gcr.io/hof-io--system/docs.hofstadter.io:$TAG_NAME', '.' ]
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: [ 'push', 'gcr.io/hof-io--system/docs.hofstadter.io:$TAG_NAME' ]
+
+- name: gcr.io/cloud-builders/curl
+  entrypoint: 'bash'
+  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__TAG__/$TAG_NAME/" > ci/k8s/deployment.yaml']
+
+- name: 'gcr.io/cloud-builders/kubectl'
+  args: [ 'apply', '-f', 'ci/k8s/deployment.yaml']
+  env:
+    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
+    - 'CLOUDSDK_CONTAINER_CLUSTER=production'
+    - 'CLOUDSDK_CORE_PROJECT=hof-io--system'
+

@@ -1,10 +1,10 @@
 steps:
 
-- name: 'ubuntu'
+- name: gcr.io/cloud-builders/curl
   entrypoint: 'bash'
   args: [ '-c', 'cp config.toml cfg.toml && cat cfg.toml | sed -e "s/__TAG__/$TAG_NAME/" > config.toml']
 
-- name: 'ubuntu'
+- name: gcr.io/cloud-builders/curl
   entrypoint: 'bash'
   args: [ '-c', 'cat config.toml']
 

@@ -4,7 +4,11 @@ steps:
   entrypoint: 'bash'
   args: [ '-c', 'cat config.toml | sed -e "s/__TAG__/$TAG_NAME/" > config.toml && cat config.toml']
 
-- name: 'gcr.io/hof-io--system/hugo'
+- name: gcr.io/cloud-builders/curl
+  entrypoint: 'bash'
+  args: [ '-c', 'cat config.toml']
+
+- name: 'gcr.io/hof-io--system/hugo:0.47'
   args: ['--baseURL', 'https://docs.hofstadter.io', '-d', 'dist']
 
 - name: 'gcr.io/cloud-builders/docker'

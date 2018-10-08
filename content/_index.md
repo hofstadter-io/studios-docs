@@ -8,17 +8,19 @@ type: "page"
 # Hofstadter Studios Documentation
 
 
-#### The Rapid Development Platform
+#### The Declarative Programming and Rapid Development Platform
 
 Hofstadter Studios is a flexible and extensible development platform.
 
 [Getting Started](./getting-started)
 🐢
-[Downloads](https://github.com/hofstadter-io/hof/releases)
+[Basics](./basics)
 🐢
 [Concepts](./concepts)
 🐢
-[Roadmap](./roadmap)
+[Videos](https://www.youtube.com/channel/UCG-DPa80f649-KP_LNzAmSQ/playlists)
+🐢
+[Downloads](https://github.com/hofstadter-io/hof/releases)
 
 #### Overview
 

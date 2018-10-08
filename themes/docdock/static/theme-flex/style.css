@@ -136,7 +136,7 @@ article > aside .menu .dd-item.active > div {
 background-color: #eee; }
 article > aside .menu .dd-item.active > div * {
   font-weight: bold;
-border-bottom: dotted 1px red; }
+border-bottom: dotted 1px blue; }
 article > aside .menu .dd-item.haschildren > div {
 margin-left: -20px; }
 article > aside .menu .dd-item div {

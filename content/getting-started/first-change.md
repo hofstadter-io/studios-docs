@@ -1,11 +1,14 @@
 ---
-title: "1. Changing the Title"
+title: "A First Change"
 date: 2018-04-10T11:58:26-06:00
 draft: false
 type: "page"
 
-weight: 1
+weight: 4
 ---
+
+The first steps will walk you through some
+of the Hofstadter Studios basic concepts.
 
 The first thing we will do is to change the title of your application.
 This will demonstrate editing a design file and pushing the updates

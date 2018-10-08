@@ -49,11 +49,14 @@ url = "/versions"
 weight = 5
 
 [[menu.shortcuts]]
-pre = "<h3>More</h3>"
 name = "<i class='fa fa-github'></i> <label>Github</label>"
-identifier = "ds"
 url = "https://github.com/hofstadter-io"
 weight = 10
+
+[[menu.shortcuts]]
+name = "<i class='fa fa-comments'></i> <label>Chat</label>"
+url = "https://gitter.im/hofstadter-io/hof"
+weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-flask'></i> <label>Studios</label>"

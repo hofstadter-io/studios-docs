@@ -7,6 +7,9 @@ type: "page"
 weight: 5
 ---
 
-...
+This section will teach you the basics of
+working with Hofstadter studios.
 
+
+#### Concepts
 

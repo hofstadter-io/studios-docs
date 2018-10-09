@@ -1,6 +1,6 @@
 ---
-title: "Hofstadter Studios Documentation"
-date: 2018-09-23
+title: "Hofstadter Studios Documentations"
+date: 2018-10-08
 draft: false
 type: "page"
 ---

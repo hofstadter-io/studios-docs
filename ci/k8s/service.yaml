@@ -1,14 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: hof-documentation-website
+  name: hof-docs
   namespace: websites
   labels:
-    app: hof-documentation-website
+    app: hof-docs
 spec:
   selector:
-    app: hof-documentation-website
-    namespace: websites
+    app: hof-docs
   type: ClusterIP
   ports:
     - port: 80

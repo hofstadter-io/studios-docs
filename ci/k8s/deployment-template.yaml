@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hof-documentation-website
+  name: hof-docs
   namespace: websites
   labels:
-    app: hof-documentation-website
+    app: hof-docs
     version: __SHA__
 spec:
   selector:
     matchLabels:
-      app: hof-documentation-website
+      app: hof-docs
       version: __SHA__
 
   strategy:
@@ -22,7 +22,7 @@ spec:
   template:
     metadata:
       labels:
-        app: hof-documentation-website
+        app: hof-docs
         version: __SHA__
     spec:
       containers:

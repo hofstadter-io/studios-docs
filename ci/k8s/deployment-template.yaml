@@ -5,6 +5,7 @@ metadata:
   namespace: websites
   labels:
     app: hof-documentation-website
+    version: __SHA__
 spec:
   selector:
     matchLabels:

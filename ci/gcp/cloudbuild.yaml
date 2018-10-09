@@ -11,7 +11,7 @@ steps:
 
 - name: gcr.io/cloud-builders/curl
   entrypoint: 'bash'
-  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__BRANCH__/$BRANCH_NAME/" > ci/k8s/deployment.yaml']
+  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__BRANCH__/$BRANCH_NAME/" -e "s/__SHA__/$SHORT_SHA/" > ci/k8s/deployment.yaml']
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [ 'apply', '-f', 'ci/k8s/deployment.yaml']

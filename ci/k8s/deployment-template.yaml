@@ -10,7 +10,7 @@ spec:
   selector:
     matchLabels:
       app: hof-documentation-website
-      namespace: websites
+      version: __SHA__
 
   strategy:
     type: RollingUpdate

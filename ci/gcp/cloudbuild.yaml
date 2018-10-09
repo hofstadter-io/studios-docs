@@ -1,21 +1,17 @@
 steps:
 
-- name: gcr.io/cloud-builders/curl
-  entrypoint: 'bash'
-  args: [ '-c', 'cp config.toml cfg.toml && cat cfg.toml | sed -e "s/__TAG__/$TAG_NAME/" > config.toml']
-
 - name: 'gcr.io/hof-io--system/hugo:0.47'
   args: ['--baseURL', 'https://docs.hofstadter.io', '-d', 'dist']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/hof-io--system/docs.hofstadter.io:$TAG_NAME', '.' ]
+  args: [ 'build', '-t', 'gcr.io/hof-io--system/docs.hofstadter.io:$BRANCH_NAME', '.' ]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'push', 'gcr.io/hof-io--system/docs.hofstadter.io:$TAG_NAME' ]
+  args: [ 'push', 'gcr.io/hof-io--system/docs.hofstadter.io:$BRANCH_NAME' ]
 
 - name: gcr.io/cloud-builders/curl
   entrypoint: 'bash'
-  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__TAG__/$TAG_NAME/" > ci/k8s/deployment.yaml']
+  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__BRANCH__/$BRANCH_NAME/" > ci/k8s/deployment.yaml']
 
 - name: 'gcr.io/cloud-builders/kubectl'
   args: [ 'apply', '-f', 'ci/k8s/deployment.yaml']

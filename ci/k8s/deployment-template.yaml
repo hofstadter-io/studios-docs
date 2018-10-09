@@ -5,7 +5,6 @@ metadata:
   namespace: websites
   labels:
     app: hof-documentation-website
-    version: __TAG__
 spec:
   selector:
     matchLabels:
@@ -27,7 +26,7 @@ spec:
     spec:
       containers:
       - name: website
-        image: gcr.io/hof-io--system/docs.hofstadter.io:__TAG__
+        image: gcr.io/hof-io--system/docs.hofstadter.io:__BRANCH__
         imagePullPolicy: Always
         ports:
         - containerPort: 80

@@ -23,7 +23,7 @@ spec:
     metadata:
       labels:
         app: hof-documentation-website
-        namespace: websites
+        version: __SHA__
     spec:
       containers:
       - name: website

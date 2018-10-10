@@ -152,6 +152,8 @@ __pages/home/home.html__
 ```html
 <h1>{ t('title') }</h1>
 
+<hr />
+
 <p>{ t('messages.hello') } from Hof Starter App</p>
 
 ```
@@ -165,8 +167,8 @@ Notice that the format is:
 There are curly braces (beacuse this is actually injected into JSX code)
 and the `t('...')` function is inside of the `{ ... }`.
 
-_Another note, you need to close all of your html tags,
-including <br /> and <hr></hr>. Either form is OK._
+__Another note__, you need to close all of your html tags,
+including `<br />` and `<hr></hr>`. Either form is OK.
 
 
 

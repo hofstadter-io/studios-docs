@@ -166,7 +166,32 @@ There are curly braces (beacuse this is actually injected into JSX code)
 and the `t('...')` function is inside of the `{ ... }`.
 
 _Another note, you need to close all of your html tags,
-including <br /> and <hr></hr>. Either form is OK.__
+including <br /> and <hr></hr>. Either form is OK._
 
 
 
+#### NavBar
+
+While not a page, the NavBar shows up on all pages.
+Here's the design from `design/navbar.yaml`
+
+```
+app:
+  name: "hof-starter-app"
+
+  navbar:
+
+    logo:
+      type: text
+      value: "Hof Starter App"
+      link: "/"
+
+    items:
+      - name: About
+        link: "/about"
+
+      - name: Contact Us
+        link: "/contact"
+```
+
+More will be added to this in the coming weeks.

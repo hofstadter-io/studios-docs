@@ -9,7 +9,6 @@ spec:
   selector:
     matchLabels:
       app: hof-docs
-      version: __SHA__
 
   strategy:
     type: RollingUpdate

@@ -12,3 +12,5 @@ of setting up your Hofstadter Studios account,
 installing the __hof__ tool, and
 connecting the tool to your live server.
 
+The starter application is available on
+[GitHub](https://github.com/hofstadter-io/hof-starter-app).

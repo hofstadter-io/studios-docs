@@ -10,6 +10,8 @@ weight: 1
 While in __Early Adopter__ phase,
 please request an account from:
 [accounts@hofstadter.io](mailto:accounts@hofstadter.io).
+Include your desired application name in the email
+and any additional emails which should have access.
 
 You can check to see if your
 __Hofstadter Studios Live__ server

@@ -208,4 +208,5 @@ each page has:
 - __custom__, to enable custom html for the React render function
 - __files__, a list of files to inject when using custom
 
+The next section will show you how to work with the pages.
 

@@ -93,6 +93,8 @@ React + Bootstrap through the
 You may use any of the components there.
 The thing to know is that you must prepend
 "__RS.__" to the component's opening and closing tags.
+You also have access to all of [bootstrap 4](https://getbootstrap.com/docs/4.0/getting-started/introduction/).
+
 For example:
 
 ```html
@@ -106,6 +108,9 @@ For example:
   </RS.Row>
 </RS.Container>
 ```
+
+The html is injected into the React `render()` function inside the
+page layout and styling.
 
 #### Translations
 
@@ -171,29 +176,29 @@ __Another note__, you need to close all of your html tags,
 including `<br />` and `<hr></hr>`. Either form is OK.
 
 
+#### Type Pages
 
-#### NavBar
+Pages for types also have data available for rendering.
+This uses the React `{ ... }` syntax for accessing the data.
 
-While not a page, the NavBar shows up on all pages.
-Here's the design from `design/navbar.yaml`
+For example, here is the Post view html content.
 
+```html
+<Link id="back-button" to="/posts">
+  {t('post.btn.back')}
+</Link>
+
+<RS.Container>
+  <RS.Row>
+    <RS.Col lg="8">
+			<h1>{ post.title }</h1>
+			<h6>by { post.author ? post.author.username : "???"}</h6>
+			<hr />
+			<pre>{ post.content }</pre> 
+		</RS.Col>
+	</RS.Row>
+</RS.Container>
 ```
-app:
-  name: "hof-starter-app"
 
-  navbar:
+(regular pages will get data access in an upcoming release)
 
-    logo:
-      type: text
-      value: "Hof Starter App"
-      link: "/"
-
-    items:
-      - name: About
-        link: "/about"
-
-      - name: Contact Us
-        link: "/contact"
-```
-
-More will be added to this in the coming weeks.

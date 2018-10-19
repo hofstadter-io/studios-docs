@@ -9,7 +9,7 @@ weight: 2
 
 
 Applications have a set of top-level configuration.
-Here we will se the basic ones.
+Here we will see the basic ones.
 You can find more details in the advanced and reference sections.
 
 While the following files can be just one file,

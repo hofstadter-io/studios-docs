@@ -198,9 +198,15 @@ Here's what it's like...
 
 ### Demo
 
+The following demo will show you
+what it is like working with
+Hofstadter Studios,
+by designing a blogging site.
 
-# INSERT VIDEO
 
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe src="https://www.youtube.com/embed/CI4355YizBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
+</div>
 
 
 

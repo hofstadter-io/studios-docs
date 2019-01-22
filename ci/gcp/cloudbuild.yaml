@@ -3,7 +3,7 @@ steps:
 - name: 'gcr.io/cloud-builders/git'
   args: [ 'submodule', 'init' ]
 
-- name: 'gcr.io/hof-io--system/hugo:0.47'
+- name: 'gcr.io/hof-io--system/hugo:0.53'
   args: ['--baseURL', 'https://docs.hofstadter.io', '-d', 'dist']
 
 - name: 'gcr.io/cloud-builders/docker'

@@ -25,7 +25,7 @@ The application stack is:
 - Docker and Kubernetes
 
 
-#### Main Commands
+#### Application Commands
 
 Update the application code:
 
@@ -33,40 +33,39 @@ Update the application code:
 hof push
 ```
 
-Update the database:
+#### Database Commands
+
+Update the database schema:
 
 ```
-hof db reset
+hof db migrate
+# or
+hof db seed
 ```
 
-This will reset and reseed your database.
-(seemless migrations are coming soon!)
+(seed will run migrations too, but will destroy existing data)
 
-Application restart:
+Updating Fields:
 
-```
-hof app reset
-```
+Update or add new fields to your types, then
 
-#### Updating Fields
-
-To update or add new fields to users or types:
-
-- add the field "migrations"
 - `hof push`
-- `hof db reset`
-- remove the "migrations" field
-- `hof push`
+- `hof db migrate`
+
+Hofstadter Studios handles schema updates and database migrations
+seemlessly in the background for you
+
+
+#### Function Commands
+
+Deploy a Serverless function:
 
 ```
-fields:
-  - name: someField
-    type: string
-    length: 64
-    migrations: true
+hof func deploy my-fn
 ```
 
-You can shortcut this, but you may see errors
-or your application can break until the database is reset.
+Delete a function:
 
-
+```
+hof func delete my-fn
+```

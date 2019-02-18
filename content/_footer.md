@@ -1,1 +1,1 @@
-Studios by Hofstadter &copy; 2018 Hofstadter, Inc
+Studios by Hofstadter &copy; 2019 Hofstadter, Inc

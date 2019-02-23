@@ -47,6 +47,7 @@ relPath: 0.0.1/app
 spec:
   fields:
   - ctx_path: dsl.0.0.1.app.docs.spec.fields.[0]
+    example: my app
     name: name
     parent: app
     parent_path: dsl.0.0.1.app.docs

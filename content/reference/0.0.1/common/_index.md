@@ -3,15 +3,15 @@ title: "common"
 type: page
 ---
 
-common
-
 Docs for common
 
 ## Fields
 
 ## Helper types
 
-- SEMVER_REGEX
+### SEMVER_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[0]
@@ -25,7 +25,9 @@ type: string
 
 ```
 
-- NAME_REGEX
+### NAME_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[1]
@@ -39,7 +41,9 @@ type: string
 
 ```
 
-- TEXT_REGEX
+### TEXT_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[2]
@@ -53,7 +57,9 @@ type: string
 
 ```
 
-- NAME_BLACKLIST
+### NAME_BLACKLIST
+
+#### spec
 
 ```yaml
 blacklist:
@@ -80,7 +86,9 @@ type: NAME_REGEX
 
 ```
 
-- SEEDFILE_REGEX
+### SEEDFILE_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[4]
@@ -95,7 +103,9 @@ type: string
 
 ```
 
-- SEEDS_SNIPPET
+### SEEDS_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[5]
@@ -155,7 +165,9 @@ type: object
 
 ```
 
-- I18NFILE_REGEX
+### I18NFILE_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[6]
@@ -170,7 +182,9 @@ type: string
 
 ```
 
-- I18N_SNIPPET
+### I18N_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[7]
@@ -200,7 +214,9 @@ type: list
 
 ```
 
-- FILEPATH_REGEX
+### FILEPATH_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[8]
@@ -215,7 +231,9 @@ type: string
 
 ```
 
-- FILES_SNIPPET
+### FILES_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[9]
@@ -252,7 +270,9 @@ type: list
 
 ```
 
-- TYPEPATH_REGEX
+### TYPEPATH_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[10]
@@ -267,7 +287,9 @@ type: string
 
 ```
 
-- COMPONENT_REGEX
+### COMPONENT_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[11]
@@ -282,7 +304,9 @@ type: string
 
 ```
 
-- DATA_SNIPPET
+### DATA_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[12]
@@ -364,7 +388,9 @@ type: list
 
 ```
 
-- COMPONENT_SNIPPET
+### COMPONENT_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[13]
@@ -434,7 +460,9 @@ variants:
 
 ```
 
-- PAGE_ROUTE_REGEX
+### PAGE_ROUTE_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[14]
@@ -451,7 +479,9 @@ type: string
 
 ```
 
-- PAGE_COMPONENT_SNIPPET
+### PAGE_COMPONENT_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[15]
@@ -498,7 +528,9 @@ type: list
 
 ```
 
-- PAGES_SNIPPET
+### PAGES_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.common.docs.helper-types.[16]

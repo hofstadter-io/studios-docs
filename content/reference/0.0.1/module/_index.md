@@ -3,13 +3,17 @@ title: "module"
 type: page
 ---
 
-module
-
 Docs for module
 
 ## Fields
 
-- forms
+### forms
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[0]
@@ -23,7 +27,13 @@ type: ignore
 
 ```
 
-- name
+### name
+
+#### Type
+
+NAME_BLACKLIST
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[1]
@@ -36,7 +46,13 @@ type: NAME_BLACKLIST
 
 ```
 
-- types
+### types
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[2]
@@ -66,7 +82,13 @@ type: list
 
 ```
 
-- files
+### files
+
+#### Type
+
+FILES_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[3]
@@ -80,7 +102,13 @@ type: FILES_SNIPPET
 
 ```
 
-- seeds
+### seeds
+
+#### Type
+
+SEEDS_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[4]
@@ -94,7 +122,13 @@ type: SEEDS_SNIPPET
 
 ```
 
-- translations
+### translations
+
+#### Type
+
+I18N_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[5]
@@ -108,7 +142,13 @@ type: I18N_SNIPPET
 
 ```
 
-- components
+### components
+
+#### Type
+
+COMPONENT_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[6]
@@ -122,7 +162,13 @@ type: COMPONENT_SNIPPET
 
 ```
 
-- pages
+### pages
+
+#### Type
+
+PAGES_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.module.docs.spec.fields.[7]

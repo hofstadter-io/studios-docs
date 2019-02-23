@@ -3,16 +3,25 @@ title: "app"
 type: page
 ---
 
-app
-
 Docs for app
 
 ## Fields
 
-- name
+### name
+
+#### Type
+
+APP_NAME_BLACKLIST
+
+#### Example
+
+my app
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[0]
+example: my app
 name: name
 parent: app
 parent_path: dsl.0.0.1.app.docs
@@ -22,7 +31,13 @@ type: APP_NAME_BLACKLIST
 
 ```
 
-- title
+### title
+
+#### Type
+
+TEXT_REGEX
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[1]
@@ -35,7 +50,13 @@ type: TEXT_REGEX
 
 ```
 
-- version
+### version
+
+#### Type
+
+SEMVER_REGEX
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[2]
@@ -48,7 +69,13 @@ type: SEMVER_REGEX
 
 ```
 
-- author
+### author
+
+#### Type
+
+AUTHOR_REGEX
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[3]
@@ -61,7 +88,13 @@ type: AUTHOR_REGEX
 
 ```
 
-- license
+### license
+
+#### Type
+
+TEXT_REGEX
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[4]
@@ -74,7 +107,13 @@ type: TEXT_REGEX
 
 ```
 
-- keywords
+### keywords
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[5]
@@ -89,7 +128,13 @@ type: list
 
 ```
 
-- modules
+### modules
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[6]
@@ -104,7 +149,13 @@ type: list
 
 ```
 
-- config
+### config
+
+#### Type
+
+object
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[7]
@@ -184,7 +235,13 @@ type: object
 
 ```
 
-- user
+### user
+
+#### Type
+
+object
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[8]
@@ -214,7 +271,13 @@ type: object
 
 ```
 
-- auth
+### auth
+
+#### Type
+
+object
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[9]
@@ -314,7 +377,13 @@ type: object
 
 ```
 
-- imports
+### imports
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[10]
@@ -345,7 +414,13 @@ type: list
 
 ```
 
-- components
+### components
+
+#### Type
+
+COMPONENT_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[11]
@@ -359,7 +434,13 @@ type: COMPONENT_SNIPPET
 
 ```
 
-- pages
+### pages
+
+#### Type
+
+PAGES_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[12]
@@ -373,7 +454,13 @@ type: PAGES_SNIPPET
 
 ```
 
-- secrets
+### secrets
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[13]
@@ -386,7 +473,13 @@ type: ignore
 
 ```
 
-- homepage
+### homepage
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[14]
@@ -399,7 +492,13 @@ type: ignore
 
 ```
 
-- layout
+### layout
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[15]
@@ -412,7 +511,13 @@ type: ignore
 
 ```
 
-- builtin-pages
+### builtin-pages
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[16]
@@ -425,7 +530,13 @@ type: ignore
 
 ```
 
-- hof-223--proxy-endpoints
+### hof-223--proxy-endpoints
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.spec.fields.[17]
@@ -441,7 +552,9 @@ type: ignore
 
 ## Helper types
 
-- APP_NAME_BLACKLIST
+### APP_NAME_BLACKLIST
+
+#### spec
 
 ```yaml
 blacklist:
@@ -457,7 +570,9 @@ type: NAME_REGEX
 
 ```
 
-- AUTHOR_REGEX
+### AUTHOR_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.helper-types.[1]
@@ -471,7 +586,9 @@ type: string
 
 ```
 
-- NPM_IMPORT_REGEX
+### NPM_IMPORT_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.helper-types.[2]
@@ -485,7 +602,9 @@ type: string
 
 ```
 
-- NPM_VERSION_REGEX
+### NPM_VERSION_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.app.docs.helper-types.[3]

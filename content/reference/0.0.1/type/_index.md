@@ -3,13 +3,17 @@ title: "type"
 type: page
 ---
 
-type
-
 Docs for type
 
 ## Fields
 
-- hooks
+### hooks
+
+#### Type
+
+ignore
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[0]
@@ -23,7 +27,13 @@ type: ignore
 
 ```
 
-- name
+### name
+
+#### Type
+
+NAME_BLACKLIST
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[1]
@@ -36,7 +46,13 @@ type: NAME_BLACKLIST
 
 ```
 
-- owned
+### owned
+
+#### Type
+
+OWNED_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[2]
@@ -50,7 +66,13 @@ type: OWNED_SNIPPET
 
 ```
 
-- auth
+### auth
+
+#### Type
+
+variant
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[3]
@@ -133,7 +155,13 @@ variants:
 
 ```
 
-- fields
+### fields
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[4]
@@ -255,7 +283,13 @@ type: list
 
 ```
 
-- relations
+### relations
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[5]
@@ -293,7 +327,13 @@ type: list
 
 ```
 
-- lookup
+### lookup
+
+#### Type
+
+list
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[6]
@@ -324,7 +364,13 @@ type: list
 
 ```
 
-- visibility
+### visibility
+
+#### Type
+
+variant
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[7]
@@ -385,7 +431,13 @@ variants:
 
 ```
 
-- files
+### files
+
+#### Type
+
+FILES_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[8]
@@ -399,7 +451,13 @@ type: FILES_SNIPPET
 
 ```
 
-- seeds
+### seeds
+
+#### Type
+
+SEEDS_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[9]
@@ -413,7 +471,13 @@ type: SEEDS_SNIPPET
 
 ```
 
-- translations
+### translations
+
+#### Type
+
+I18N_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[10]
@@ -427,7 +491,13 @@ type: I18N_SNIPPET
 
 ```
 
-- components
+### components
+
+#### Type
+
+COMPONENT_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[11]
@@ -441,7 +511,13 @@ type: COMPONENT_SNIPPET
 
 ```
 
-- pages
+### pages
+
+#### Type
+
+PAGES_SNIPPET
+
+#### Source
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.spec.fields.[12]
@@ -457,7 +533,9 @@ type: PAGES_SNIPPET
 
 ## Helper types
 
-- AUTH_ROLE_REGEX
+### AUTH_ROLE_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.helper-types.[0]
@@ -471,7 +549,9 @@ type: string
 
 ```
 
-- RELATION_TYPE_REGEX
+### RELATION_TYPE_REGEX
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.helper-types.[1]
@@ -485,7 +565,9 @@ type: string
 
 ```
 
-- OWNED_SNIPPET
+### OWNED_SNIPPET
+
+#### spec
 
 ```yaml
 ctx_path: dsl.0.0.1.type.docs.helper-types.[2]

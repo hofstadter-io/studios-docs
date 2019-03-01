@@ -8,8 +8,8 @@ weight: 50
 ---
 
 - React / React-Native
-- GraphQL / Apollo
-- Express / NodeJS
+- GraphQL / REST API
+- Express / NodeJS / Apollo
 - Postgresql
 - Kubernetes
 

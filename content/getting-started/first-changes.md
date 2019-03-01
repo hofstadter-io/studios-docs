@@ -33,7 +33,7 @@ and save the file.
 Now, back in the terminal, run:
 
 ```
-hof push
+hof app push
 ```
 
 You should see a list of files that get uploaded.

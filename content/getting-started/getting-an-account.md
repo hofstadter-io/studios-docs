@@ -1,6 +1,6 @@
 ---
 title: "Getting An Account"
-date: 2018-04-10T11:58:26-06:00
+date: 2019-01-03T11:58:26-06:00
 draft: false
 type: "page"
 
@@ -13,12 +13,4 @@ During the __Beta__ phase, fill out the
 You will get an email when your account is setup.
 If you have any questions, please reach out to
 [accounts@hofstadter.io](mailto:accounts@hofstadter.io).
-
-You can check to see if your
-__Hofstadter Studios Live__ server
-is up and running by going to:
-
-https://your-app-name.live.hofstadter.io
-
-in the browser of your choice.
 

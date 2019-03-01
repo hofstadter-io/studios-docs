@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-date: 2018-04-10T11:58:26-06:00
+date: 2019-01-03T11:58:26-06:00
 draft: false
 type: "page"
 
@@ -12,5 +12,8 @@ of setting up your Hofstadter Studios account,
 installing the __hof__ tool, and
 connecting the tool to your live server.
 
-The starter application is available on
-[GitHub](https://github.com/hofstadter-io/hof-starter-app).
+1. [Getting an Account](./getting-an-account)
+1. [Installing the CLI](./installation)
+1. [Creating an App](./create-an-app)
+1. [First Changes](./first-changes)
+1. [Next Steps](./next-steps)

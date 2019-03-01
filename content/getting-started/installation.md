@@ -1,10 +1,10 @@
 ---
 title: "Installing the Hof Tool"
-date: 2018-04-10T11:58:26-06:00
+date: 2019-01-03T11:58:26-06:00
 draft: false
 type: "page"
 
-weight: 2
+weight: 3
 ---
 
 To work with __Hofstadter Studios__ you will need the __hof__ tool.
@@ -39,3 +39,25 @@ added to your `PATH`.
 
 Run `hof help` to make sure the tool is available.
 
+#### Connecting to Studios
+
+The `hof` CLI requires a configuration file to
+connect with the Studios server.
+
+```
+hof config set-context <context-name> <username> <apikey> https://studios.studios.live.hofstadter.io
+```
+
+- `context-name` can be anything
+- `username` is your username
+- `apikey` can be found in your [profile](https://studios.studios.live.hofstadter.io/profile)
+
+
+You can verify your configuration with:
+
+```
+hof config view all
+hof app status
+```
+
+_The second command will fail. Go to the next step to create and deploy your first application_

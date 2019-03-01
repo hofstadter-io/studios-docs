@@ -1,10 +1,10 @@
 ---
-title: "A First Change"
+title: "First Changes"
 date: 2018-04-10T11:58:26-06:00
 draft: false
 type: "page"
 
-weight: 4
+weight: 8
 ---
 
 The first steps will walk you through some
@@ -39,8 +39,9 @@ hof push
 You should see a list of files that get uploaded.
 (This is currently everything, but we're working on making it minimal :)
 
-Now, go back to your application in the browser at
-https://your-app-name.live.hofstater.io
+Now, go back to your application in the browser
 and watch as the page and title
 automatically refresh with the latest updates!
+
+_you can view the browser console to see some logs and progress_
 

@@ -66,6 +66,14 @@ Server:   running
 System:   running
 ```
 
+your application is running. Now run:
+
+```
+hof db seed
+```
+
+to create the initial database.
+Once this is complete,
 you can follow the link to use your app.
 
 

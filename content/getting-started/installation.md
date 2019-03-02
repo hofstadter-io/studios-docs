@@ -7,13 +7,13 @@ type: "page"
 weight: 3
 ---
 
-To work with __Hofstadter Studios__ you will need the __hof__ tool.
+To work with __Hofstadter Studios__ you will need the __hof__ CLI tool.
 __hof__ is available for all major operation systems
 and architectures. Thank You Golang Developers and Community!
 
 ##### Precompiled Binaries
 
-Download a precompiled binary__hof__ from the github
+Download a precompiled binary from the github
 [releases page](https://github.com/hofstadter-io/hof/releases).
 
 ##### Homebrew
@@ -39,25 +39,6 @@ added to your `PATH`.
 
 Run `hof help` to make sure the tool is available.
 
-#### Connecting to Studios
+You can now configure the __hof__ tool to connect to the
+__Hofstadter Studios__ system.
 
-The `hof` CLI requires a configuration file to
-connect with the Studios server.
-
-```
-hof config set-context <context-name> <username> <apikey> https://studios.studios.live.hofstadter.io
-```
-
-- `context-name` can be anything
-- `username` is your username
-- `apikey` can be found in your [profile](https://studios.studios.live.hofstadter.io/profile)
-
-
-You can verify your configuration with:
-
-```
-hof config view all
-hof app status
-```
-
-_The second command will fail. Go to the next step to create and deploy your first application_

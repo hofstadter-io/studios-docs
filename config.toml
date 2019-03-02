@@ -60,5 +60,5 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-flask'></i> <label>Studios</label>"
-url = "https://hof-starter-app.live.hofstadter.io"
+url = "https://studios.studios.live.hofstadter.io"
 weight = 30

@@ -1,5 +1,6 @@
 ctx_path: dsl.0-0-1.module.docs
-intro: Docs for module
+hof-ctx:
+  intro: Docs for module
 name: module
 parent: ""
 parent_path: ""
@@ -91,4 +92,5 @@ spec:
   path: spec
   type: object
 version: 0.0.1
+weight: 2
 

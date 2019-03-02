@@ -59,7 +59,8 @@ helper-types:
   pkg_path: 0-0-1/type/docs/helper-types
   pkgPath: type/OWNED_SNIPPET
   type: object
-intro: Docs for type
+hof-ctx:
+  intro: Docs for type
 name: type
 parent: ""
 parent_path: ""
@@ -440,4 +441,5 @@ spec:
   path: spec
   type: object
 version: 0.0.1
+weight: 3
 

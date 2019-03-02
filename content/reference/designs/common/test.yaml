@@ -504,7 +504,8 @@ helper-types:
         type: ignore
       type: object
     type: list
-intro: Docs for common
+hof-ctx:
+  intro: Docs for common
 name: common
 parent: ""
 parent_path: ""
@@ -517,4 +518,5 @@ spec:
   path: spec
   type: object
 version: 0.0.1
+weight: 4
 

@@ -41,7 +41,8 @@ helper-types:
   - ^[\~\^]?[[:digit:]]+\.[[:digit:]]+$
   - ^[\~\^]?[[:digit:]]+$
   type: string
-intro: Docs for app
+hof-ctx:
+  intro: Docs for app
 name: app
 parent: ""
 parent_path: ""
@@ -51,7 +52,8 @@ relPath: 0-0-1/app
 spec:
   fields:
   - ctx_path: dsl.0-0-1.app.docs.spec.fields.[0]
-    example: my app
+    hof-ctx:
+      example: my app
     name: name
     parent: app
     parent_path: dsl.0-0-1.app.docs
@@ -378,4 +380,5 @@ spec:
   path: spec
   type: object
 version: 0.0.1
+weight: 1
 

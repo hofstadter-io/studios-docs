@@ -2,6 +2,15 @@
     {{ partial "next-prev-page.html" . }}
   </div>
 
+  <div>
+    {{ if .Site.Params.editURL }}
+    <div class="github-link">
+      <a href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><i class="fa fa-code-fork"></i>
+        {{T "Edit-this-page"}}</a>
+    </div>
+    {{end}}
+  </div>
+
   </section>
 </article>
 
@@ -30,10 +39,11 @@
 
     {{ if .Site.Params.editURL }}
     <div class="github-link">
-      <a href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><i class="fa fa-code-fork"></i>
+      <a style="font-size: 1.2em; color: #2980b9" href="{{ .Site.Params.editURL }}{{ replace .File.Dir "\\" "/" }}{{ .File.LogicalName }}" target="blank"><i class="fa fa-code-fork"></i>
         {{T "Edit-this-page"}}</a>
     </div>
     {{end}}
+
   </div>
 
 

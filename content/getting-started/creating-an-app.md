@@ -30,7 +30,7 @@ You can also use any starter-app you or anyone else creates.
 
 _there is a list of starting applications at the bottom of the page_
 
-#### Updaing your app name
+#### Updating your app name
 
 Look through all of the yaml files at the root of the directory.
 Change all of the top-level name fields to the name you created your application with.

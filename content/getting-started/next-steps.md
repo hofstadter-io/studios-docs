@@ -1,20 +1,23 @@
 ---
 title: "Next Steps"
-date: 2018-04-10T11:58:26-06:00
+date: 2019-03-02T11:58:26-06:00
 draft: false
 type: "page"
 
 weight: 10
 ---
 
-If you like examples, goto [the basics](../basics),
-or if you like theory, check out [the concepts](../concepts).
-There are also [videos and tutorials](../tutorials) available.
-After that, there are
-[advanced topics](../advanced),
-[design & dsl reverences](../reference),
-and [administration topics](../administration).
-To stay up to date, take a look at [the change log](../changelog)
-and if you get stuck or have any questions, [reach out for some help](../getting-help).
+If you like:
+
+- Examples, goto [the basics](/basics).
+- Theory, check out [the concepts](/concepts).
+- Videos and walkthroughs, [tutorials](/tutorials) are here.
+
+After that, there are:
+
+- [References](/reference) for designs and the __hof__ tool.
+- To stay up to date, take a look at [the change log](/changelog).
+- To see what's in the works, read through [the roadmap](/roadmap).
+- If you get stuck or have any questions, [reach out for some help](/getting-help).
 
 Happy Hof'n!!

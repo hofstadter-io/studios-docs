@@ -9,9 +9,9 @@ weight: 1000
 
 Helpers:
 
-- [AUTH_ROLE_REGEX](#AUTH_ROLE_REGEX)
-- [RELATION_TYPE_REGEX](#RELATION_TYPE_REGEX)
-- [OWNED_SNIPPET](#OWNED_SNIPPET)
+- [AUTH_ROLE_REGEX](#auth-role-regex)
+- [RELATION_TYPE_REGEX](#relation-type-regex)
+- [OWNED_SNIPPET](#owned-snippet)
 
 ---
 

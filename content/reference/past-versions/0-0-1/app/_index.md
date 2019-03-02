@@ -27,8 +27,8 @@ Fields:
 
 Helpers:
 
-- [APP_NAME_BLACKLIST](./helpers/#APP_NAME_BLACKLIST)
-- [AUTHOR_REGEX](./helpers/#AUTHOR_REGEX)
-- [NPM_IMPORT_REGEX](./helpers/#NPM_IMPORT_REGEX)
-- [NPM_VERSION_REGEX](./helpers/#NPM_VERSION_REGEX)
+- [APP_NAME_BLACKLIST](./helpers/#app-name-blacklist)
+- [AUTHOR_REGEX](./helpers/#author-regex)
+- [NPM_IMPORT_REGEX](./helpers/#npm-import-regex)
+- [NPM_VERSION_REGEX](./helpers/#npm-version-regex)
 

@@ -7,7 +7,7 @@ type: "page"
 weight: 1
 ---
 
-contents:
+Fields:
 
 - [name](#name)
 - [types](#types)

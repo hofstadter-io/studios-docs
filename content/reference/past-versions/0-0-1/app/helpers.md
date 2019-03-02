@@ -9,10 +9,10 @@ weight: 1000
 
 Helpers:
 
-- [APP_NAME_BLACKLIST](#APP_NAME_BLACKLIST)
-- [AUTHOR_REGEX](#AUTHOR_REGEX)
-- [NPM_IMPORT_REGEX](#NPM_IMPORT_REGEX)
-- [NPM_VERSION_REGEX](#NPM_VERSION_REGEX)
+- [APP_NAME_BLACKLIST](#app-name-blacklist)
+- [AUTHOR_REGEX](#author-regex)
+- [NPM_IMPORT_REGEX](#npm-import-regex)
+- [NPM_VERSION_REGEX](#npm-version-regex)
 
 ---
 

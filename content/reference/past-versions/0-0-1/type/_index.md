@@ -26,7 +26,7 @@ Fields:
 
 Helpers:
 
-- [AUTH_ROLE_REGEX](./helpers/#AUTH_ROLE_REGEX)
-- [RELATION_TYPE_REGEX](./helpers/#RELATION_TYPE_REGEX)
-- [OWNED_SNIPPET](./helpers/#OWNED_SNIPPET)
+- [AUTH_ROLE_REGEX](./helpers/#auth-role-regex)
+- [RELATION_TYPE_REGEX](./helpers/#relation-type-regex)
+- [OWNED_SNIPPET](./helpers/#owned-snippet)
 

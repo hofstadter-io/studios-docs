@@ -7,37 +7,38 @@ type: "page"
 weight: 1000
 ---
 
+Helpers:
+
+- [APP_NAME_BLACKLIST](#app-name-blacklist)
+- [AUTHOR_REGEX](#author-regex)
+- [NPM_IMPORT_REGEX](#npm-import-regex)
+- [NPM_VERSION_REGEX](#npm-version-regex)
+
+---
+
 ### APP_NAME_BLACKLIST
 
-#### spec
+__Spec__
 
 ```yaml
+
 blacklist:
 - hof
 - hofstadter
-ctx_path: dsl.0-0-1.app.docs.helper-types.[0]
 name: APP_NAME_BLACKLIST
-parent: app
-parent_path: dsl.0-0-1.app.docs
 path: helper-types
-pkg_path: 0-0-1/app/docs/helper-types
-pkgPath: app/APP_NAME_BLACKLIST
 type: NAME_REGEX
 
 ```
 
 ### AUTHOR_REGEX
 
-#### spec
+__Spec__
 
 ```yaml
-ctx_path: dsl.0-0-1.app.docs.helper-types.[1]
+
 name: AUTHOR_REGEX
-parent: app
-parent_path: dsl.0-0-1.app.docs
 path: helper-types
-pkg_path: 0-0-1/app/docs/helper-types
-pkgPath: app/AUTHOR_REGEX
 regex: ^[[:alpha:]][[:word:] -\<\>\@\.]*$
 type: string
 
@@ -45,16 +46,12 @@ type: string
 
 ### NPM_IMPORT_REGEX
 
-#### spec
+__Spec__
 
 ```yaml
-ctx_path: dsl.0-0-1.app.docs.helper-types.[2]
+
 name: NPM_IMPORT_REGEX
-parent: app
-parent_path: dsl.0-0-1.app.docs
 path: helper-types
-pkg_path: 0-0-1/app/docs/helper-types
-pkgPath: app/NPM_IMPORT_REGEX
 regex: ^[[:alpha:]][[:word:]-]*$
 type: string
 
@@ -62,16 +59,12 @@ type: string
 
 ### NPM_VERSION_REGEX
 
-#### spec
+__Spec__
 
 ```yaml
-ctx_path: dsl.0-0-1.app.docs.helper-types.[3]
+
 name: NPM_VERSION_REGEX
-parent: app
-parent_path: dsl.0-0-1.app.docs
 path: helper-types
-pkg_path: 0-0-1/app/docs/helper-types
-pkgPath: app/NPM_VERSION_REGEX
 regex:
 - ^[\~\^]?[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+$
 - ^[\~\^]?[[:digit:]]+\.[[:digit:]]+$

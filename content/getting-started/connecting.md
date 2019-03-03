@@ -22,8 +22,6 @@ hof config set-context <context-name> <username> <apikey> https://studios.studio
 You can verify your configuration with:
 
 ```
-hof config view all
-hof app status
+hof config test
 ```
 
-_The second command will fail. Go to the next step to create and deploy your first application_

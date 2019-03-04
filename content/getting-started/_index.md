@@ -14,6 +14,7 @@ connecting the tool to your live server.
 
 1. [Getting an Account](./getting-an-account)
 1. [Installing the CLI](./installation)
+1. [Connecting to Studios](./connecting)
 1. [Creating an App](./create-an-app)
 1. [First Changes](./first-changes)
 1. [Next Steps](./next-steps)

@@ -16,6 +16,18 @@ Applications are created through the
 [Studios App Form](https://studios.studios.live.hofstadter.io/app/new).
 Go there to create your app.
 
+Make sure that:
+
+Name should contain no spaces, only lowercase and `-` (hyphens).
+
+and
+
+```
+Type    = "starter"
+Version = "beta"
+```
+
+
 #### Clone the hof-starter-app
 
 To get the initial version of your application clone the

@@ -10,13 +10,14 @@ type: "page"
 
 #### The Declarative Programming and Rapid Development Platform
 
-Hofstadter Studios is a flexible and extensible
+__Hofstadter Studios__ is a
 declarative programming and rapid development platform.
-Express your application through focused languages, via designs,
-describing the data shape, flow, and presentation.
-Studios will generate the majority of the implementation
-leaving you to focus on the concept and experience for
-your application or business.
+You describe your application as designs,
+_the single-source of truth_, and
+your real-time code updates to reflect your changes.
+__Hofstadter Studios__ will generate a
+full implementation and handle its management
+so you can rapidly iterate on your ideas.
 
 [Getting Started](./getting-started)
 🐢
@@ -24,9 +25,9 @@ your application or business.
 🐢
 [Concepts](./concepts)
 🐢
-[Videos](https://www.youtube.com/channel/UCG-DPa80f649-KP_LNzAmSQ/playlists)
+[Tutorials](./tutorials)
 🐢
-[Downloads](https://github.com/hofstadter-io/hof/releases)
+[Open Source](https://github.com/hofstadter-io)
 
 #### Overview
 

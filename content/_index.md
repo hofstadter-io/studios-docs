@@ -12,9 +12,9 @@ type: "page"
 
 __Hofstadter Studios__ is a
 declarative programming and rapid development platform.
-You describe your application as designs,
+You describe your idea as "designs",
 _the single-source of truth_, and
-your real-time code updates to reflect your changes.
+your real-time application updates to reflect your changes.
 __Hofstadter Studios__ will generate a
 full implementation and handle its management
 so you can rapidly iterate on your ideas.

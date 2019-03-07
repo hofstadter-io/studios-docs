@@ -12,44 +12,22 @@ you can setup your local working copy.
 
 #### Creating an Application
 
-Applications are created through the
-[Studios App Form](https://studios.studios.live.hofstadter.io/app/new).
-Go there to create your app.
-
-Make sure that:
-
-Name should contain no spaces, only lowercase and `-` (hyphens).
-
-and
+To create a new application:
 
 ```
-Type    = "starter"
-Version = "beta"
+hof app create <name> <version> <template-url>
+
+hof app create my-app beta https://github.com/hofstadter-io/hof-starter-app
 ```
 
+- `name` is a kebab-style-name
+- `version` is a Studios version
+- `template-url` is a URL to a git repository
 
-#### Clone the hof-starter-app
-
-To get the initial version of your application clone the
-[hof-starter-app](https://github.com/hofstadter-io/hof-starter-app).
+Studios versions can be found by running:
 
 ```
-git clone https://github.com/hofstadter-io/hof-starter-app app-name
-cd app-name
-```
-
-You can also use any starter-app you or anyone else creates.
-
-_there is a list of starting applications at the bottom of the page_
-
-#### Updating your app name
-
-Look through all of the yaml files at the root of the directory.
-Change all of the top-level name fields to the name you created your application with.
-
-```yaml
-app:
-  name: "<app-name>"
+hof app versions
 ```
 
 #### Deploying your app to Studios

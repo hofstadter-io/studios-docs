@@ -33,9 +33,9 @@ cd <app-name>
 
 #### Pushing and Deploying
 
-The first time you create an application,
+Before you can use your application,
 you will also need to push and deploy it.
-You can do that now, or wait a
+You can do that now, or wait for a
 [couple of sections](../deploying).
 
 #### Full Create Command

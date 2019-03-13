@@ -9,6 +9,21 @@ weight: 15
 
 Templates are used for the creation of "new" things.
 
+
+#### Hofstadter Templates:
+
+- [studios-templates](https://github.com/hofstadter-io/studios-templates)
+
+
+#### Community Templates:
+
+- Be the first!
+
+Make a Pull Request to have your __Studios__ module added here!
+
+(there is a link at the bottom of this page)
+
+
 #### Using the new command
 
 ```
@@ -27,16 +42,3 @@ hof new <what> <where/name> <template>
     - repo-url: `https://...` or a local path. If local, git-ref is ignored.
     - git-ref: a branch, tag, or commit hash.
     - sub-dir: into the repository, this is how collection repos are handled.
-
-#### Hofstadter Templates:
-
-- [studios-templates](https://github.com/hofstadter-io/studios-templates)
-
-#### Community Templates:
-
-- Be the first!
-
-Make a Pull Request to have your __Studios__ module added here!
-
-(there is a link at the bottom of this page)
-

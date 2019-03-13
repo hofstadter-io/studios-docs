@@ -11,7 +11,7 @@ The `hof` CLI requires a configuration file to
 connect with the __Hofstadter Studios__ servers.
 
 ```
-hof config set-context <context-name> <username> <apikey> https://studios.studios.live.hofstadter.io
+hof config set-context <context-name> <username> <apikey>
 ```
 
 - `context-name` can be anything

@@ -7,8 +7,10 @@ type: "page"
 weight: 85
 ---
 
-If you have any difficulties, please reach out to us at:
+##### If you have any difficulties, please reach out to us at:
 
-- [Online Chat](https://gitter.im/hofstadter-io/hof)
-- [Contact From](https://hofstadter.io/contact/)
+- run `hof app validate` to check design correctness
+- check the browser console logs
+- send a chat message in the [hof gitter](https://gitter.im/hofstadter-io/hof)
+- send an email to [support@hofstadter.io](mailto:support@hofstadter.io)
 

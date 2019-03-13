@@ -8,8 +8,7 @@ weight: 100
 ---
 
 
-Nothing scheduled per se, send your feedback for prioritization.
-
+Nothing ordered or scheduled per se, send your feedback for prioritization.
 
 
 ### Frontend
@@ -33,5 +32,4 @@ Nothing scheduled per se, send your feedback for prioritization.
 - GDPR / data privacy
 - file uploads
 - social
-- custom domains
 

@@ -1,5 +1,5 @@
 ---
-title: "Installing the Hof Tool"
+title: "Installing the CLI"
 date: 2019-03-02T11:58:26-06:00
 draft: false
 type: "page"
@@ -41,4 +41,9 @@ Run `hof help` to make sure the tool is available.
 
 You can now configure the __hof__ tool to connect to the
 __Hofstadter Studios__ system.
+
+##### Windows Users
+
+There may be issues with your anti-virus for
+trusting the binary and the "`$HOME/.hof`" directory.
 

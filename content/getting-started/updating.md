@@ -47,3 +47,40 @@ If you need to reset the database completely, run:
 ```
 hof db reset
 ```
+
+
+#### Renaming fields and other design
+
+Renaming fields and other design paths
+often requires adding a "rename" field.
+
+```
+  ...
+  name: <old-name>
+  rename: <new-name>
+```
+
+Then, do the app and database updates:
+
+```
+hof app push
+hof db seed
+```
+
+and then making then name
+the new name.
+
+```
+  ...
+  name: <new-name>
+```
+
+and finally
+
+```
+hof app push
+```
+
+See the more advanced section
+for further details.
+

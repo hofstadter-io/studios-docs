@@ -8,21 +8,17 @@ weight: 7
 ---
 
 You can import modules from any Git repository like GitHub, GitLab, or Bitbucket.
-These are preconfigured __Studios__ modules which contain:
+These are preconfigured __Studios__ bundles which contain:
+modules, types, pages, components, and translations.
 
-- types
-- pages
-- components
-- translations
+Modules can be used to quickly expand
+your application functionality.
 
-With modules, you can quickly expand the functionality
-within your application.
-
-You can find a list and help for the import command at:
+A module list and usage instructions can be found at:
 [Studios Universe - Modules](/universe/modules).
 
 
-#### Import a "simple-blog" Module
+#### Import a Module
 
 The `simple-blog` has
 types, pages, and components for
@@ -30,25 +26,62 @@ posts, comments, and tags.
 This module shows many of the configurable
 options within the designs.
 
-To import the `simple-blog`:
+##### Import command
 
 ```
 hof import "#simple-blog"
 ```
 
-You can now find the `blog` module
-at `design-vendor/modules/blog/`
+This pulls the latest `studios-modules` and
+imports from the `simple-blog` folder.
+
+You can now find the module
+under `design-vendor/modules/blog/`
+
+##### Enable in the App
 
 Update your `design/modules.yaml` file
 to include the following line:
 
-```
-app
+```yaml
+app:
   name: ...
 
   modules:
+    - account
     - blog
 ```
+
+##### Add to the Menu
+
+You can create menu links
+for the modules in navbar,
+by editing the file:
+
+```
+design/layout.yaml
+```
+
+add the following:
+
+```yaml
+app:
+  name: ...
+
+  layout:
+    navbar:
+      ...
+      leftItems:
+        ...
+        - name: posts
+          route: "/posts"
+          roles:
+            - user
+            - admin
+```
+
+
+##### Push the Changes
 
 If you have deployed your application,
 you will need to push and migrate
@@ -114,11 +147,112 @@ You can extend and override an imported module by
 writing types, pages, and component files
 in your application's `design` folder.
 
-##### Extend the Design
+##### Extend and Overriding the Design
 
+Designs from the `design-vendor` directory
+can be extended and overriden.
+This means you can write just the new design
+for your desired changes.
+Create the same folder / file structure,
+as well as the same, minimal object structure,
+to extend and override.
 
+__Start the mirrored directories__
+
+```
+mkdir -p design/modules/blog/locales
+```
+
+__Create the file: `design/modules/blog/post-mods.yaml`__
+
+```yaml
+type:
+  name: post
+
+  # override: let admins edit posts
+  auth:
+    update: ['admin']
+
+  # extend by adding field 'blurb'
+  fields:
+  - name: blurb
+    type: string
+    length: 256
+```
+
+__Create the file: `design/modules/blog/locales/en.js`__
+
+```
+cp design-vendor/modules/blog/locales/en.js design/modules/blog/locales/en.js
+```
+
+and add
+
+```
+"blurb": "Blurb",
+```
+
+to the json
+
+```json
+{
+
+  "post": {
+    "fields": {
+
+      "blurb": "Blurb",
+
+    }
+  }
+    
+}
+```
+
+__Summary of changes__
+
+- changed `type.post.auth.update` to add `['admin']`
+- added `type.post.fields.blurb` for the post list page
+- added `post.field.blurb` to the translation files.
 
 ##### Override a Page
 
 
+__Create the mirrored directory__
+
+```
+mkdir -p design/modules/blog/pages/list
+```
+
+__Create the file: `design/modules/blog/pages/post/list/content.html`__
+
+```
+cp design-vendor/modules/blog/pages/post/list/content.html design/modules/blog/pages/post/list/content.html
+```
+
+and change (around line 32)
+
+```
+<p className="mb-1">{ post.content.substring(0,64) }</p>
+```
+
+to
+
+```
+<p className="mb-1">{ post.blurb }</p>
+```
+
+##### Updating the Application
+
+The next section is all about this.
+It assumes we are deploying for the first time,
+so if you already have deployed your application,
+you can skip some steps.
+
+_Note_ that because we have changed the shape of the data,
+we will need to both:
+
+- push the application code
+- migrate the database
+
+_(TODO dev note, add a flag to push)_
 

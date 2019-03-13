@@ -45,3 +45,9 @@ hof db seed
 Once this is complete,
 you can follow the link to use your app.
 
+
+#### Custom Deployments
+
+__Private Hofstadter Studios__ can be deployed to any cloud or in your data center.
+[Conteact Sales](https://hofstadter.io/contact/) to learn more.
+

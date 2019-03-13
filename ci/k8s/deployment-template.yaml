@@ -21,7 +21,7 @@ spec:
     metadata:
       labels:
         app: hof-docs
-        version: __SHA__
+        version: "__SHA__"
     spec:
       containers:
       - name: website

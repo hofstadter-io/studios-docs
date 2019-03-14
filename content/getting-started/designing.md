@@ -479,7 +479,7 @@ We’ll fill them in after learning how.
 # create the module
 hof new module design/modules/notes
 
-# create the types
+# create the type
 hof new type design/modules/notes/note
 
 # create the page
@@ -624,9 +624,9 @@ You can find the included data using the following code.
 </div>
 ```
 
-##### <data-name> and loading
+##### data and loading
 
-The data is attached by name to the props object as well.
+The data is attached by `name` to the props object as well.
 It also includes a loading property. The formats are
 `dataName` and `loadingDataName`, where `data-name`
 is the name you gave to the content data in the designs.
@@ -745,7 +745,7 @@ module:
 
   pages:
     - name: board
-      route: "/board”
+      route: "/board"
 
 
       style:

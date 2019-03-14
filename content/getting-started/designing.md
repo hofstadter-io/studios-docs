@@ -16,18 +16,26 @@ and your live server will update to reflect the changes.
 
 The next few _Getting Started_ steps will walk you through
 some of the __Hofstadter Studios__ concepts.
+We will use a note taking application as an example.
 
-- [Overview](#overview)
+- [Application Folder](#application-folder)
+- [Design Folder](#design-folder)
 - [Changing the Title](#changing-the-title)
 - [Customizing the Home page](#customizing-the-home-page)
-- [Creating New Functionality](#creating-new-functionaliity)
+- [Creating New Functionality](#creating-new-functionality)
   - [Creating a Module](#creating-a-module)
   - [Creating a Type](#creating-a-type)
-  - [Custom Page](#custom-page)
-  - [Custom Component](#custom-component)
+  - [Pages and Components](#pages-and-components)
+  - TBD [Note Taking Example Module](#note-taking-example-module)
+- [Content, Data, and Mutations](#content-data-and-mutations)
+  - [Content JSX and SCSS](#content-jsx-and-scss)
+  - [Layout and Styling Libraries](#layout-and-styling-libraries)
+  - [Using Data and Mutations](#using-data-and-mutations)
+  - TBD [Note Taking Example Content](#note-taking-example-content)
+- [Custom Logic and Events](#custom-logic-and-events)
 - [Custom and Private Repositories](#custom-and-private-repositories)
 
-### Overview
+### Application Folder
 
 At the root of your application,
 you will see an important
@@ -38,57 +46,86 @@ for configuring the app features,
 as well as a `modules` directory,
 where your modules will go.
 
-The directory overview:
+The application directory overview:
 
-```sh
-app-dir/
-  design/        # Main application design
-  design-vendor/ # Imported modules' design
-
-  pages/         # for page content and layouts
-  translations/  # and multilingual assets
-  seeds/         # application seed data
-  custom/        # for custom files
-
-  # secrets are not uploaded with a push
-  # these are handled differently
-  secrets/       # for application secrets
-
-  # used seperately, coming soon
-  funcs/         # for serverless functions
+```
+<app-name>/  # your application directory
+│
+│   # Main application design
+├── design/            # your design
+├── design-vendor/     # imported modules
+│
+│   # Main non-design files
+├── pages/             # for page content and layouts
+├── translations/      # and multilingual assets
+├── seeds/             # application seed data
+├── custom/            # for custom files
+├── components/        # for component content and layouts
+│
+│   # secrets are not uploaded with a push
+│   # these are handled differently
+├── secrets/     # for application secrets
+│
+│   # coming soon
+└── funcs/       # serverless functions
 ```
 
 
-### Designs
+### Design Folder
 
 Design represent the state you wish your application to be in.
 They are data files written in specific formats, called DSLs.
 While the examples are in yaml, you can intermix json, xml, toml, and hof-lang as well.
 [Documentation for Designs](/reference/designs) are found in the reference section.
 
-The layout for design (and design-vendor) is as follows:
+The design directory overview: (also design-vendor)
 
-```sh
-design/
-  app.yaml         # and other files...
-  modules/
-    account/       # ...same as blog...
-    blog/
-      module.yaml
-      type.yaml    # per type designs...
-      pages/
-      componets/
-      locales/
-      seeds/
+```
+design
+│
+│   # Application Design
+├── app.yaml
+├── meta.yaml
+├── config.yaml
+├── users.yaml
+├── auth.yaml
+│
+├── layout.yaml
+├── pages.yaml
+├── components.yaml
+│
+├── imports.yaml  # NPM imports
+├── modules.yaml  # list of modules to enable
+│
+│
+│   # Module and Type Files
+└── modules/
+   └─<module-name>
+       │   # Module Design
+       ├── module.yaml
+       │
+       │   # Type Design
+       ├── <type-name-1>.yaml
+       ├── <type-name-2>.yaml
+       ├── ...
+       │
+       │   # Content and other files
+       ├── pages/
+       ├── components/
+       ├── locales
+       └── seeds/
+
 ```
 
-You will find design files, html, css, jsx componets, translation files and seed data.
+We’ll get to know the various directories and files
+as we go through this page.
+More detailed information is available
+in the other major sections.
 
-There are many 
-
-We will start by making our own updates to the app, modules, types, pages, and components.
 
 ### Changing the Title
+
+We will start by making our own updates to the app, modules, types, pages, and components.
 
 The first thing you may want to do is
 change the Title of your application.
@@ -182,67 +219,400 @@ design the layout and styling.
 
 ### Creating New Functionality
 
-You can create five main objects in __Studios__:
+There are several objects in __Hofstadter Studios__
+with which you can extend and customize your application:
 
-- modules - collections of types, pages, and components.
-- types - the data objects in your system
-- pages - for apps, modules, and types
-- components - for apps, modules, and types
-- functions - serverless capabilities coming soon.
+- __modules__ - collections of types, pages, and components.
+- __types__ - the data objects in your system.
+- __pages__ - for apps, modules, and types.
+- __components__ - for apps, modules, and types.
+- __functions__ - serverless hooks and events.
+
+After creating the application, you will:
+
+- organize and shape the data with modules and types.
+- display and style with pages and componets.
+
+The full new command options are in
+[Studios Universe - Templates documentation](/universe/templates).
 
 #### Creating a Module
+
+__Modules__ group types and can include
+pages, components, translations, and other files.
+You can create a module by running:
+
+##### new command
 
 ```sh
 hof new module "design/modules/<module-name>"
 ```
 
+##### directory layout
+
+This will create a skeleton of
+directories, designs, and other files:
+
+```
+design/modules/
+└── <module-name>
+    ├── module.yaml
+    ├── pages/
+    │   └── <page-name>/
+    │       ├── content.jsx
+    │       └── style.scss
+    ├── components/
+    │   └── <component-name>/
+    │       ├── content.jsx
+    │       └── style.scss
+    ├── locales
+    │   ├── en.json
+    │   └── es.json
+    └── seeds/
+        └── default.json
+```
+
+We’ll continue exploring these files
+the remainder of this page.
+
+##### design file
+
+```yaml
+module:
+  name: ...
+
+  types:
+    - type-name-a
+    - type-name-b
+
+  pages: ...
+  components: ...
+  translations: ...
+  seeds: ...
+  files: ...
+  ...
+  # and more
+```
+
+
 #### Creating a Type
+
+__Types__ represent your application’s
+data or models, the fields, ownership, visibility,
+the relationships, permissions, rules, hooks, events, and more.
+
+##### new command
 
 ```sh
 hof new type "design/modules/<module-name>/<type-name>"
 ```
 
-#### Custom Page
+##### directory layout
 
-App page:
+The new type command only creates a single file.
 
-```sh
-hof new module "design/<page-name>"
+```
+design/modules/
+└── <module-name>
+    │
+    │   # The new file
+    └── <type-name>.yaml
 ```
 
-Module page:
+##### design file
 
-```sh
-hof new module "design/modules/<module-name>/<page-name>"
+```yaml
+type:
+  name: "<type-name>"
+
+  fields: ...
+    - name: ...
+      type: ...
+      ...
+
+  relations: ...
+    - name: ...
+      type: type.modules.module-name.type-name
+      relation: "one-to-one|one-to-many|many-to-many|..."
+
+  owned:
+    name: .. (optional)
+    type: "has-one|has-many"
+    ...
+
+  lookup: ...
+  visibility: ...
+
+  auth:
+    view: ...
+    create: ...
+    ...
+
+  pages: ...
+  components: ...
+  translations: ...
+  seeds: ...
+  files: ...
+  ...
+  # and more
 ```
 
-Type page:
+#### Pages and Components
+
+New pages and components can appear
+at the app, module, or type level.
+You can substitue “component” for “page”
+in the subsections that follow.
+
+##### new command
+
+New Pages can appear under
 
 ```sh
-hof new module "design/modules/<module-name>/<type-name>/<page-name>"
+# App page:
+hof new page "design/<page-name>"
+
+# Module page:
+hof new page "design/modules/<module-name>/<page-name>"
+
+# Type page:
+hof new page "design/modules/<module-name>/<type-name>/<page-name>"
 ```
 
-#### Custom Component
+##### directory layout
 
-App component:
+```
+design/modules/
+├── <module-name>
+│   ├── <type-name>.yaml
+│   │   │
+│   │   │   # New Page Layout
+└───└───└── pages
+            ├── <page-name>.yaml
+            └── <page-name>
+                ├── content.html
+                └── style.scss
 
-```sh
-hof new component "design/<component-name>"
 ```
 
-Module component:
+##### Content Design File
 
-```sh
-hof new component "design/modules/<module-name>/<component-name>"
+
+The design file layout for pages and components:
+
+```
+app/module/type:
+  name: ...
+
+  pages:
+    - name: <page-name>
+      route: "/route/path"
+      style:
+        - design/path/to/style.scss
+      content:
+        - design/path/to/content.html
+
+      imports: ...       # custom imports, pages only
+      components: ...    # custom components
+      translations: ...  # internationalization files
+
+      # Inject data into the page or component
+      #   the current user in the page data
+      current-user: boolean
+      data: ...
 ```
 
-Type component:
+You can find the full format starting with the
+[page snippet in the reference section](/reference/designs/common/helpers/#pages-snippet)
 
-```sh
-hof new component "design/modules/<module-name>/<type-name>/<component-name>"
+
+##### Injected Data Design
+
+The current user and type data can be injected into pages and components.
+You can combine data from any type, local or across modules.
+
+```
+pages/componsntes:
+  - name: ...
+    ...
+
+    # Include the current, authenticated user information
+    current-user: true
+
+    # A list of type data to inject
+    data:
+
+        # The name will be accessigble from “props.name”
+      - name: name-in-props
+
+        # the dotpath to the type
+        type: "type.modules.<module-name>.<type-name>"
+
+        # Load data configuration
+        query:
+          # single object or a list
+          type: "view" or "list"
+
+          # whether the data should be real-time updated
+          sync: true/false
+
+          # ways to limit what data is sub selected or looked up
+          filters: ...
+          variables: ...
+
+        # mutation functions accessible from "props.createTypeName”
+        mutations:
+          - create
+          - update
+          - delete
+
 ```
 
-#### Custom Logic
+[Full Reference](/reference/designs/common/helpers/#data-snippet)
+
+
+#### Note Taking Example Module
+
+
+
+### Content, Data, and Mutations
+
+Content is rendered from React Components.
+You can set the content and add styling.
+Both design configurations accept ordered lists
+so you can break your React code into multiple files.
+
+#### Content JSX and SCSS
+
+##### Page Content
+
+The JSX returned from a React Component `render()`,
+make sure to have a single matching tag and to close all tags.
+
+```jsx
+<div>
+  ...
+</div>
+```
+
+##### Component Content
+
+Any new functions you want, you are in a React Component Class with ES6.
+Note, React component life cycle functions require calling the previous declaration.
+
+Page is in a render function:
+
+```jsx
+<div>
+  ...
+  // use data and mutations from the “props” object.
+</div>
+```
+
+Component is in a React Component Class:
+
+```jsx
+// create functions here
+...
+
+render() {
+  console.log(this.props)
+
+  return (
+    <div>
+      ...
+      // use data, mutations, and any functions
+    </div>
+  )
+}
+```
+
+There are also ways to support full custom components,
+please see the other major sections of the documentation.
+
+#### Layout and Styling Libraries
+
+##### SCSS files
+
+You can use SASS for styling.
+
+https://sass-lang.com/
+
+The files specified in the design list are injected in-order.
+
+##### Bootstrap Framework
+
+You can use anything from the Bootstrap Framework.
+
+https://getbootstrap.com/docs/4.3/components/alerts/
+
+__Note, you have to substitute__ `className` when you see `class`
+because the content is JSX.
+
+https://reactjs.org/docs/introducing-jsx.html
+
+
+##### Custom Library Imports
+
+You can import libraries from NPM to include in your application,
+please see the other major sections of the documentation.
+
+
+#### Using Data and Mutations
+
+The data and mutations you specifiy in your design
+will be attached to the props object in your content.
+
+##### current-user
+
+`current-user` is attached to the props object.
+You can find the included data using the following code.
+
+```
+<div>
+  <h1>Current User: { props.currentUser.username }</h1>
+  <pre>{ JSON.stringify(props.currentUser, '', '    ') }</pre>
+</div>
+```
+
+##### <data-name> and loading
+
+The data is attached by name to the props object as well.
+It also includes a loading property. The formats are
+`dataName` and `loadingDataName`, where `data-name`
+is the name you gave to the content data in the designs.
+
+```
+<div>
+  { loadingNote ?
+  <pre>loading...</pre>
+  :
+  <pre>{ JSON.stringify(props.note, '', '    ') }</pre>
+  }
+</div>
+```
+
+##### calling mutation functions
+
+The data is attached by name to the props object as well.
+The format is `mutationTypeName`.
+
+```
+<div>
+  <button className=”btn btn-danger” onClick={ () => props.deleteNote(props.note.id) }>delete</button>
+  <hr />
+  { loadingNote ?
+  <pre>loading...</pre>
+  :
+  <pre>{ JSON.stringify(props.note, '', '    ') }</pre>
+  }
+</div>
+```
+
+
+#### Note Taking Example Content
+
+### Custom Logic and Events
 
 Serverless functions as well as built-in hooks, handlers and, integrations.
 
@@ -255,6 +625,8 @@ hof func "<command>" "<name>"
 coming soon!
 
 
+
+
 ### Custom and Private Repositories
 
 The new command has a longer format enabling the use
@@ -263,6 +635,5 @@ See the [Studios Universe - Templates documentation](/universe/templates) for mo
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.
-
 
 

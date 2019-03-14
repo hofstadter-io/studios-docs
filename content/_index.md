@@ -29,9 +29,15 @@ so you can rapidly iterate on your ideas.
 🐢
 [Open Source](https://github.com/hofstadter-io)
 
-##### INSERT NEW DEMO VIDEO HERE
+The following demo video follows along with the getting started.
 
-#### Hofstadter Studios
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe src="https://www.youtube.com/embed/CI4355YizBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
+</div>
+
+
+
+### Hofstadter Studios
 
 In Hofstadter Studios you describe your application.
 You design users and their profiles,
@@ -80,70 +86,18 @@ you have the ability to style your
 application and create that
 desired experience or process.
 
-#### Applications and Designs
+### Resources and Designs
 
-Designs express and idea in special languages,
-as a group referred to as Domain Specific Languages (DSL).
-For example, here is a design for a user:
+Designs are the central concept in __Hofstadter Studios__
+with which you describe your application.
+Designs express your idea in special languages,
+commonly referred to as Domain Specific Languages (DSL).
+__Studios__ has DSLs for __apps__, __modules__, and __types__.
+Apps group modules, modules group types,
+and all three can have pages and components.
 
-```yaml
-user:
-  profile:
-    fields:
-      - name: first_name
-        type: string
-        length: 64
-      - name: middle_name
-        type: string
-        length: 64
-      - name: last_name
-        type: string
-        length: 64
-      - name: title
-        type: string
-        length: 16
-      - name: suffix
-        type: string
-        length: 16
-      - name: age
-        type: int
-        validation:
-          - type: >=
-            value: 0
-      - name: language
-        type: enum
-        choices:
-          - en_US
-          - es_ES
-      - name: picture
-        type: image
-```
-
-"__user__" is the name of a DSL.
-All users have a profile, composed
-of a number of fields.
-Each field has a required name and a type,
-as well as extra details or configuration,
-depending on the type.
-Every DSL will have its own
-words, components, and options.
-One important commonality between
-the languages, designs, and sub-details
-is the use of "__name__".
-"__name__" is used for significant pieces
-of your designs and files.
-
-What you don't see here are typical fields,
-ones like `id`, `email`, `password`, or `role`.
-Hofstadter Studios has a number of fields
-pre-included so that users can
-manage thier account and credentials
-and the platform can manage
-authentication and permissions.
-You can also configure OAuth and Payments.
-
-Let's look at the design for an "Item"
-such as in a todo application:
+Here is an eample design for
+an "Item" for a Todo application:
 
 ```yaml
 type:
@@ -161,61 +115,132 @@ type:
     - name: data
       type: json
 
-  owners:
-    - type: user
-      relation: has-many
+  owned:
+    name: author
+    type: has-many
 
   relations:
-    - name: categories
-      type: type.modules.todo.ItemCategory
-      relation: many-to-many
-    - name: tags
-      type: type.modules.todo.ItemTag
+    - name: labels
+      type: type.modules.todo.Label
       relation: many-to-many
 
   auth:
-    edit: ["admin", "owner"]
-    view: ["public"]
+    default: true
+
+  pages:
+    default: true
+
+  components:
+    default: true
 
   search:
     fields:
       - name
       - description
       - content
-    relation-fields:
-      - categories.value
-      - tags.value
+    relations:
+      - labels.value
 ```
 
-"__type__" is an important DSL
-and is central to data shape and flow.
-We see types can have have fields,
-like the user profile,
-as well as owners and relations to
-other types or data.
-You also specify the auth or permissions
-as well as advanced functionalities
-like searching, social, and privacy.
+DSLs are used to drastically increase
+the word to powering technology ratio.
+In a few hundred lines you can create applications
+full of features and ready for users.
+Change your design, do a __hof app push__
+and the application updates itself
+automatically on all the devices.
 
-As you work with Hofstadter Studios
-and update your designs,
-just __hof push__ to send the latest
-out to your live application server.
-Here's what it's like...
+The following are the top-level specification for the
+__app__, __module__, __type__, and __page__/__component__ DSLs.
+Check out the [getting started with Designs](/getting-started/designs) to learn more.
+
+##### Application Design
+
+```yaml
+app:
+  name: my-app
+  title: My Studios App
+
+  config: ...
+  modules: ...
+
+  layouts: ...
+  pages: ...
+  components: ...
+  forms: ...
+
+  imports: ...
+  files: ...
+  translations: ...
+  seeds: ...
+```
+
+##### Module Design
+
+```yaml
+module:
+  name: notes
+  types: ...
+
+  pages: ...
+  components: ...
+  forms: ...
+
+  files: ...
+  translations: ...
+  seeds: ...
+```
+
+##### Type Design
+
+```yaml
+type:
+  name: note
+
+  fields: ...
+  relations: ...
+
+  owned: ...
+  auth: ...
+  visibility: ...
+
+  pages: ...
+  components: ...
+  forms: ...
+
+  files: ...
+  translations: ...
+  seeds: ...
+```
+
+##### Page & Component Design
+
+```yaml
+# can appear in app, module, or type
+app|module|type:
+  name: ...
+
+  # pages and components have the same sub-design or DSL
+  pages|component:
+    - name: page-view
+      route: "/page/:id"
+
+      style: ...         # list of SCSS files
+      content: ...       # list of JSX files
+
+      imports: ...       # custom imports, pages only
+      components: ...    # custom components
+      translations: ...  # internationalization files
+
+      # Inject the user and data into the page or component
+      #   the current user in the page data
+      current-user: ...
+      data: ...
+```
 
 
-### Demo
 
-The following demo will show you
-what it is like working with
-Hofstadter Studios,
-by designing a blogging site.
-
-
-<div class="embed-responsive embed-responsive-16by9">
-  <iframe src="https://www.youtube.com/embed/CI4355YizBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
-</div>
-
+### Building with Studios
 
 
 

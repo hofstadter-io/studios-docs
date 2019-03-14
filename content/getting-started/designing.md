@@ -397,7 +397,7 @@ design/modules/
 
 The design file layout for pages and components:
 
-```
+```yaml
 app/module/type:
   name: ...
 
@@ -669,7 +669,7 @@ You shouldn’t have to actually do anything at this point.
 
 __design/modules/notes/module.yaml__
 
-``` yaml
+```yaml
 module:
 
   name: notes

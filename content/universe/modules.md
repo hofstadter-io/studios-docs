@@ -13,6 +13,8 @@ Modules are git repositories with prefigured functionality for __Studios__ appli
 #### Hofstadter Modules:
 
 - [studios-modules](https://github.com/hofstadter-io/studios-modules)
+    - account-default
+    - simple-blog
 
 
 #### Community Modules:
@@ -41,7 +43,7 @@ This will place the bundles design in the `design-vendor` directory.
 
 The import command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Modules](/universe/modules) documentation for more information.
+See the [Studios Universe - Modules documentation](/universe/modules) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

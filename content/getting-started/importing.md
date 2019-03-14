@@ -261,7 +261,7 @@ _(TODO dev note, add a flag to push, so one can migrate as well)_
 
 The import command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Modules](/universe/modules) documentation for more information.
+See the [Studios Universe - Modules documentation](/universe/modules) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

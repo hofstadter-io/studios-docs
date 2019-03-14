@@ -30,12 +30,12 @@ Now change to this directory.
 cd "<app-name>"
 ```
 
-#### Pushing and Deploying
+##### Pushing and Deploying
 
 Before you can use your application,
 you will also need to push and deploy it.
-You can do that now, or wait for a
-[couple of sections](../deploying).
+We will do this in a couple of sections
+after making some initial changes and updates.
 
 #### Full Create Command
 
@@ -66,7 +66,7 @@ hof app versions
 
 The create command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Applications](/universe/applications) documentation for more information.
+See the [Studios Universe - Applications documentation](/universe/applications) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

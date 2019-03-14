@@ -8,7 +8,10 @@ weight: 8
 ---
 
 
-#### Deploying your app to Studios
+Before you can use your applicate,
+you must first deploy it.
+
+#### Deploy your Application
 
 The `hof` CLI commands are run from your application directory.
 
@@ -44,6 +47,14 @@ hof db seed
 
 Once this is complete,
 you can follow the link to use your app.
+
+#### Shutdown an Application
+
+To shutdown an application, run
+
+```
+hof app shutdown
+```
 
 
 #### Custom Deployments

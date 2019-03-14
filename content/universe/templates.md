@@ -47,7 +47,7 @@ hof new "<what>" "<where/name>" "<template>"
 
 The new command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Templates](/universe/templates) documentation for more information.
+See the [Studios Universe - Templates documentation](/universe/templates) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

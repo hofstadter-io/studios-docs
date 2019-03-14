@@ -53,7 +53,7 @@ hof app versions
 
 The create command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Applications](/universe/applications) documentation for more information.
+See the [Studios Universe - Applications documentation](/universe/applications) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

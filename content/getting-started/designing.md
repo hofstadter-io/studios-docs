@@ -7,8 +7,15 @@ type: "page"
 weight: 6
 ---
 
-The first steps will walk you through some
-of the Hofstadter Studios basic concepts.
+Designs are a central concept in the __Hofstatder Studios__ system,
+and represent the _source-of-truth_ to your application.
+Apps are groups of modules, modules are groups of types,
+and all have pages, components and customization.
+As you modify your designs, you push your application,
+and your live server will update to reflect the changes.
+
+The next few _Getting Started_ steps will walk you through
+some of the __Hofstadter Studios__ concepts.
 
 - [Overview](#overview)
 - [Changing the Title](#changing-the-title)
@@ -23,7 +30,7 @@ of the Hofstadter Studios basic concepts.
 ### Overview
 
 At the root of your application,
-you will see a very important
+you will see an important
 directory named `design`.
 This is the "design" of your application.
 You will see a number of files here,
@@ -41,7 +48,7 @@ app-dir/
   pages/         # for page content and layouts
   translations/  # and multilingual assets
   seeds/         # application seed data
-  custom/        # for custom UI components
+  custom/        # for custom files
 
   # secrets are not uploaded with a push
   # these are handled differently
@@ -57,7 +64,7 @@ app-dir/
 Design represent the state you wish your application to be in.
 They are data files written in specific formats, called DSLs.
 While the examples are in yaml, you can intermix json, xml, toml, and hof-lang as well.
-[Documentation for Designs](/reference/designs) are found in the reference section of these docs.
+[Documentation for Designs](/reference/designs) are found in the reference section.
 
 The layout for design (and design-vendor) is as follows:
 
@@ -68,7 +75,7 @@ design/
     account/       # ...same as blog...
     blog/
       module.yaml
-      type.yaml    # per type files...
+      type.yaml    # per type designs...
       pages/
       componets/
       locales/
@@ -129,7 +136,7 @@ Add the following
 
 ##### Update the content
 
-and the content in __pages/home/content.html__
+change the content in __pages/home/content.html__ from:
 
 ```jsx
 <div id="home-content">
@@ -137,6 +144,18 @@ and the content in __pages/home/content.html__
 <h1>{ t('title') }</h1>
 
 <p>{ t('messages.hello') } from Hof Starter App</p>
+
+</div>
+```
+
+to:
+
+```jsx
+<div id="home-content">
+
+<h1>{ t('messages.hello') }, { props.currentUser.username }</h1>
+
+<p>Welcome to my first Studios app!</p>
 
 </div>
 ```
@@ -237,7 +256,7 @@ coming soon!
 
 The new command has a longer format enabling the use
 any git based repository or the local filesystem.
-See the [Studios Universe - Templates](/universe/templates) documentation for more information.
+See the [Studios Universe - Templates documentation](/universe/templates) for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

@@ -1,14 +1,14 @@
 ---
-title: "Hofstadter Studios Documentations"
+title: "Hofstadter Studios Documentation"
 date: 2019-03-14
 draft: false
 type: "page"
 ---
 
-# Hofstadter Studios Documentation
+# Hofstadter Studios
 
 
-#### The Declarative Programming and Rapid Development Platform
+##### The Declarative Programming and Rapid Development Platform
 
 __Hofstadter Studios__ is a
 declarative programming and rapid development platform.
@@ -23,13 +23,15 @@ so you can rapidly iterate on your ideas.
 🐢
 [Basics](./basics)
 🐢
-[Concepts](./concepts)
-🐢
 [Tutorials](./tutorials)
+🐢
+[Universe](./universe)
+🐢
+[Reference](./reference)
 🐢
 [Open Source](https://github.com/hofstadter-io)
 
-The following demo video follows along with the getting started.
+The following demo video follows along with the Getting Started section
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe src="https://www.youtube.com/embed/CI4355YizBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>

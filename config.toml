@@ -2,7 +2,7 @@ baseURL = "/"
 
 languageCode = "en-us"
 DefaultContentLanguage = "en"
-title = "Hofstadter Studios Documentation"
+title = "Hofstadter Studios"
 theme = "docdock-mod"
 pygmentsCodeFences = true
 pygmentsStyle = "monokailight"

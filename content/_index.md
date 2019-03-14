@@ -31,14 +31,11 @@ so you can rapidly iterate on your ideas.
 🐢
 [Open Source](https://github.com/hofstadter-io)
 
-The following demo video follows along with the Getting Started section
-
 <div class="embed-responsive embed-responsive-16by9">
   <iframe src="https://www.youtube.com/embed/CI4355YizBA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></iframe>
 </div>
 
-
-
+<br>
 ### Hofstadter Studios
 
 In Hofstadter Studios you describe your application.
@@ -88,6 +85,7 @@ you have the ability to style your
 application and create that
 desired experience or process.
 
+<br>
 ### Resources and Designs
 
 Designs are the central concept in __Hofstadter Studios__
@@ -242,7 +240,10 @@ app|module|type:
 
 
 
+<br>
 ### Building with Studios
 
 
+
+<br>
 

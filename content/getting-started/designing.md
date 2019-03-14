@@ -18,6 +18,7 @@ of the Hofstadter Studios basic concepts.
   - [Creating a Type](#creating-a-type)
   - [Custom Page](#custom-page)
   - [Custom Component](#custom-component)
+- [Custom and Private Repositories](#custom-and-private-repositories)
 
 ### Overview
 
@@ -232,7 +233,7 @@ hof func "<command>" "<name>"
 coming soon!
 
 
-##### Custom and Private Repositories
+#### Custom and Private Repositories
 
 The new command has a longer format enabling the use
 any git based repository or the local filesystem.

@@ -17,6 +17,17 @@ your application functionality.
 A module list and usage instructions can be found at:
 [Studios Universe - Modules](/universe/modules).
 
+- [Import a Module](#import-a-module)
+  - [Import command](#import-command)
+  - [Enable in the App](#enable-in-the-app)
+  - [Create a Menu Entry](#create-a-menu-entry)
+- [Module Overview](#module-overview)
+- [Extending and Overriding](#extending-and-overriding)
+  - [Extending the Design](#extending-the-design)
+  - [Overriding a Page](#overriding-a-page)
+  - [Updating the Application](#updating-the-application)
+- [Custom and Private Repositories](#custom-and-private-repositories)
+
 
 #### Import a Module
 
@@ -32,11 +43,11 @@ options within the designs.
 hof import "#simple-blog"
 ```
 
-This pulls the latest `studios-modules` and
-imports from the `simple-blog` folder.
+Pulls the latest `studios-modules` and
+imports designs from the `simple-blog` folder.
 
-You can now find the module
-under `design-vendor/modules/blog/`
+The full import command is available in
+[Studios Universe - Modules documentation](/universe/modules#using-the-import-command).
 
 ##### Enable in the App
 
@@ -52,7 +63,7 @@ app:
     - blog
 ```
 
-##### Add to the Menu
+##### Create a Menu Entry
 
 You can create menu links
 for the modules in navbar,
@@ -141,13 +152,13 @@ blog/
 - `locales` has i18n translations.
 - `seeds` has some initial data for the module.
 
-#### Extending & Overriding
+#### Extending and Overriding
 
 You can extend and override an imported module by
 writing types, pages, and component files
 in your application's `design` folder.
 
-##### Extend and Overriding the Design
+##### Extend the Design
 
 Designs from the `design-vendor` directory
 can be extended and overriden.
@@ -168,10 +179,6 @@ __Create the file: `design/modules/blog/post-mods.yaml`__
 ```yaml
 type:
   name: post
-
-  # override: let admins edit posts
-  auth:
-    update: ['admin']
 
   # extend by adding field 'blurb'
   fields:
@@ -208,13 +215,7 @@ to the json
 }
 ```
 
-__Summary of changes__
-
-- changed `type.post.auth.update` to add `['admin']`
-- added `type.post.fields.blurb` for the post list page
-- added `post.field.blurb` to the translation files.
-
-##### Override a Page
+##### Overriding a Page
 
 
 __Create the mirrored directory__
@@ -254,9 +255,9 @@ we will need to both:
 - push the application code
 - migrate the database
 
-_(TODO dev note, add a flag to push)_
+_(TODO dev note, add a flag to push, so one can migrate as well)_
 
-##### Custom and Private Repositories
+#### Custom and Private Repositories
 
 The import command has a longer format enabling the use
 any git based repository or the local filesystem.

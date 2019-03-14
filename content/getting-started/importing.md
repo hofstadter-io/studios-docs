@@ -18,9 +18,6 @@ A module list and usage instructions can be found at:
 [Studios Universe - Modules](/universe/modules).
 
 - [Import a Module](#import-a-module)
-  - [Import command](#import-command)
-  - [Enable in the App](#enable-in-the-app)
-  - [Create a Menu Entry](#create-a-menu-entry)
 - [Module Overview](#module-overview)
 - [Extending and Overriding](#extending-and-overriding)
   - [Extending the Design](#extending-the-design)
@@ -29,7 +26,7 @@ A module list and usage instructions can be found at:
 - [Custom and Private Repositories](#custom-and-private-repositories)
 
 
-#### Import a Module
+### Import a Module
 
 The `simple-blog` has
 types, pages, and components for
@@ -93,7 +90,7 @@ app:
             - admin
 ```
 
-#### Module Overview
+### Module Overview
 
 The following is the directory layout
 of your new blog module.
@@ -147,13 +144,13 @@ blog/
 - `locales` has i18n translations.
 - `seeds` has some initial data for the module.
 
-#### Extending and Overriding
+### Extending and Overriding
 
 You can extend and override an imported module by
 writing types, pages, and component files
 in your application's `design` folder.
 
-##### Extend the Design
+#### Extend the Design
 
 You can extend and override module designs and files
 imported to the `design-vendor` directory.
@@ -163,13 +160,13 @@ Create the same folder / file structure,
 as well as the same, minimal object structure for designs.
 
 
-__Start the mirrored directories__
+##### Start the mirrored directories
 
 ```sh
 mkdir -p design/modules/blog/locales
 ```
 
-__Create the file: `design/modules/blog/post-mods.yaml`__
+##### Create the file: `design/modules/blog/post-mods.yaml`
 
 ```yaml
 type:
@@ -182,7 +179,7 @@ type:
     length: 256
 ```
 
-__Copy the file: `design/modules/blog/locales/en.js`__
+##### Copy the file: `design/modules/blog/locales/en.js`
 
 ```sh
 cp design-vendor/modules/blog/locales/en.js design/modules/blog/locales/en.js
@@ -210,16 +207,16 @@ to the json
 }
 ```
 
-##### Overriding a Page
+#### Overriding a Page
 
 
-__Create the mirrored directory__
+##### Create the mirrored directory
 
 ```sh
 mkdir -p design/modules/blog/pages/list
 ```
 
-__Copy the file: `design/modules/blog/pages/post/list/content.html`__
+##### Copy the file: `design/modules/blog/pages/post/list/content.html`
 
 ```sh
 cp design-vendor/modules/blog/pages/post/list/content.html design/modules/blog/pages/post/list/content.html
@@ -237,7 +234,7 @@ to
 <p className="mb-1">{ post.blurb }</p>
 ```
 
-##### Updating the Application
+#### Updating the Application
 
 The next section is all about this.
 It assumes we are deploying for the first time,
@@ -252,7 +249,7 @@ we will need to both:
 
 _(TODO dev note, add a flag to push, so one can migrate as well)_
 
-#### Custom and Private Repositories
+### Custom and Private Repositories
 
 The import command has a longer format enabling the use
 any git based repository or the local filesystem.

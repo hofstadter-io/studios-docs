@@ -190,19 +190,19 @@ You can create five main objects in __Studios__:
 - components - for apps, modules, and types
 - functions - serverless capabilities coming soon.
 
-##### Creating a Module
+#### Creating a Module
 
 ```sh
 hof new module "design/modules/<module-name>"
 ```
 
-##### Creating a Type
+#### Creating a Type
 
 ```sh
 hof new type "design/modules/<module-name>/<type-name>"
 ```
 
-##### Custom Page
+#### Custom Page
 
 App page:
 
@@ -222,7 +222,7 @@ Type page:
 hof new module "design/modules/<module-name>/<type-name>/<page-name>"
 ```
 
-##### Custom Component
+#### Custom Component
 
 App component:
 
@@ -242,7 +242,7 @@ Type component:
 hof new component "design/modules/<module-name>/<type-name>/<component-name>"
 ```
 
-##### Custom Logic
+#### Custom Logic
 
 Serverless functions as well as built-in hooks, handlers and, integrations.
 
@@ -255,7 +255,7 @@ hof func "<command>" "<name>"
 coming soon!
 
 
-#### Custom and Private Repositories
+### Custom and Private Repositories
 
 The new command has a longer format enabling the use
 any git based repository or the local filesystem.

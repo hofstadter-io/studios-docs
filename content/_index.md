@@ -246,6 +246,17 @@ app|module|type:
 <br>
 ### Building with Studios
 
+Building with __Hofstadter Studios__ is a highly iterative process
+designed to help you go “From idea to application with ease.”
+
+[Getting Started](./getting-started) will show you how to:
+
+- Get an account, install the tool, and connect to __Studios__.
+- Create an application, frame out modules and types, and design all the things.
+- Push, deploy, and enjoy your application.
+
+
+#### Happy Hof’n
 
 
 <br>

@@ -13,11 +13,14 @@ type: "page"
 __Hofstadter Studios__ is a
 declarative programming and rapid development platform.
 You describe your idea as "designs",
-_the single-source of truth_, and
+_the single-source of truth_ for your application, and
 your real-time application updates to reflect the changes.
-__Hofstadter Studios__ will generate a
-full implementation and handle the management
+__Hofstadter Studios__ will generate a full-stack
+implementation and handle the management
 so you can rapidly iterate on your ideas.
+Customize the client with pages, components, and styling.
+Specialize the logic with events, hooks, serverless functions.
+Integrate with proxies, sdks, pipelines, and third party systems.
 
 [Getting Started](./getting-started)
 🐢

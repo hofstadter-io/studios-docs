@@ -495,11 +495,15 @@ design/modules/notes/
 ├── note.yaml
 │
 ├── pages
+│   ├── board.yaml
+│   └── board
+│       ├── content.jsx
+│       └── style.scss
 ├── components
 │
 ├── locales
-│   ├── en.json
-│   └── es.json
+│   ├── en.json
+│   └── es.json
 └── seeds
     └── default.json
 ```
@@ -545,6 +549,7 @@ make sure to have a single matching tag and to close all tags.
 ```jsx
 <div>
   ...
+  // use data and mutations from the “props” object.
 </div>
 ```
 
@@ -552,15 +557,6 @@ make sure to have a single matching tag and to close all tags.
 
 Any new functions you want, you are in a React Component Class with ES6.
 Note, React component life cycle functions require calling the previous declaration.
-
-Page is in a render function:
-
-```jsx
-<div>
-  ...
-  // use data and mutations from the “props” object.
-</div>
-```
 
 Component is in a React Component Class:
 

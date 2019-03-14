@@ -8,7 +8,7 @@ weight: 5
 ---
 
 Hofstadter Studios enables you to create and deploy applications with ease.
-The development version is a real-time, hot-reloading, full-stack JS application
+Your development server is a real-time, cloud-native, hot-reloading, full-stack JS application
 based on the [Apollo Universal Starter Kit](https://github.com/sysgears/apollo-universal-starter-kit).
 
 #### Creating an Application

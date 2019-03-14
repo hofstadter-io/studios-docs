@@ -56,6 +56,10 @@ To shutdown an application, run
 hof app shutdown
 ```
 
+You can later redeploy your application
+and pick up where you left off,
+with your data and configuration still in place.
+
 
 #### Custom Deployments
 

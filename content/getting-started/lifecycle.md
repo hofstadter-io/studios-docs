@@ -12,14 +12,14 @@ The following commands are used in the application lifecycle.
 
 ### Application Lifecycle
 
-__Deploy, Shutdown__
+##### Deploy, Shutdown
 
 ```sh
 hof app deploy
 hof app shutdown
 ```
 
-__Moving code__
+##### Moving code
 
 ```sh
 hof app push
@@ -29,13 +29,13 @@ hof app pull
 _Note, push and pull do_ __not__ _require the application to be deployed._
 
 
-__Updating to a new Studios version__
+##### Updating to a new Studios version
 
 ```sh
 hof app update "<version>"
 ```
 
-__Resetting the application__
+##### Resetting the application
 
 ```sh
 hof app reset
@@ -56,19 +56,19 @@ type:
   relations: ...
 ```
 
-__Only migrate__
+##### Only migrate
 
 ```sh
 hof db migrate
 ```
 
-__Migrate and reset the data__
+##### Migrate and reset the data
 
 ```sh
 hof db seed
 ```
 
-__Completely reset the database__
+##### Completely reset the database
 
 ```sh
 hof db reset
@@ -134,5 +134,5 @@ to enable the process to become more smooth.
 
 ### Function Lifecycle
 
-coming soon, though you can push them today
+coming soon
 

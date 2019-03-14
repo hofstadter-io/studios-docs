@@ -84,19 +84,14 @@ app:
       ...
       leftItems:
         ...
+
+        # the new content
         - name: posts
           route: "/posts"
           roles:
             - user
             - admin
 ```
-
-
-##### Push the Changes
-
-If you have deployed your application,
-you will need to push and migrate
-to see the changes.
 
 #### Module Overview
 
@@ -187,7 +182,7 @@ type:
     length: 256
 ```
 
-__Create the file: `design/modules/blog/locales/en.js`__
+__Copy the file: `design/modules/blog/locales/en.js`__
 
 ```sh
 cp design-vendor/modules/blog/locales/en.js design/modules/blog/locales/en.js
@@ -224,7 +219,7 @@ __Create the mirrored directory__
 mkdir -p design/modules/blog/pages/list
 ```
 
-__Create the file: `design/modules/blog/pages/post/list/content.html`__
+__Copy the file: `design/modules/blog/pages/post/list/content.html`__
 
 ```sh
 cp design-vendor/modules/blog/pages/post/list/content.html design/modules/blog/pages/post/list/content.html

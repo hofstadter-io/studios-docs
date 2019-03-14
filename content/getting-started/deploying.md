@@ -12,7 +12,7 @@ weight: 8
 
 The `hof` CLI commands are run from your application directory.
 
-```
+```sh
 hof app push
 hof app deploy
 ```
@@ -20,13 +20,13 @@ hof app deploy
 The first deployment will take about 5 minutes.
 You can check the status with:
 
-```
+```sh
 hof app status
 ```
 
 Once you see:
 
-```
+```sh
 https://<app-name>.<username>.live.hofstadter.io
 <username> <app-name>
 Client:   running
@@ -38,7 +38,7 @@ your application is running.
 
 Now we can create some initial data with:
 
-```
+```sh
 hof db seed
 ```
 
@@ -49,5 +49,5 @@ you can follow the link to use your app.
 #### Custom Deployments
 
 __Private Hofstadter Studios__ can be deployed to any cloud or in your data center.
-[Conteact Sales](https://hofstadter.io/contact/) to learn more.
+[Contact Sales to learn more](https://hofstadter.io/contact/).
 

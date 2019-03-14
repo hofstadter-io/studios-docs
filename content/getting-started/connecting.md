@@ -10,8 +10,8 @@ weight: 4
 The `hof` CLI requires a configuration file to
 connect with the __Hofstadter Studios__ servers.
 
-```
-hof config set-context <context-name> <username> <apikey>
+```sh
+hof config set-context "<context-name>" "<username>" "<apikey>"
 ```
 
 - `context-name` can be anything
@@ -21,7 +21,7 @@ hof config set-context <context-name> <username> <apikey>
 
 You can verify your configuration with:
 
-```
+```sh
 hof config test
 ```
 

@@ -19,16 +19,16 @@ A known list is maintained on [Studios Universe - Applications](/universe/applic
 
 To create a new application from the default, run:
 
-```
-hof app create <name>
+```sh
+hof app create "<app-name>"
 ```
 
 You should see a response that indicates the app was created.
 
 Now change to this directory.
 
-```
-cd <app-name>
+```sh
+cd "<app-name>"
 ```
 
 #### Pushing and Deploying
@@ -43,14 +43,14 @@ You can do that now, or wait for a
 The create command can work off of a URL supporting git like
 GitHub, GitLab, or Bitbucket.
 
-```
-hof app create <name> <version> <template-url>
+```sh
+hof app create "<name>" "<version>" "<template-url>"
 ```
 
 example:
 
-```
-hof app create my-app beta https://github.com/hofstadter-io/hof-starter-app
+```sh
+hof app create my-app beta "https://github.com/hofstadter-io/hof-starter-app"
 ```
 
 - `name` is a kebab-style-name
@@ -59,11 +59,15 @@ hof app create my-app beta https://github.com/hofstadter-io/hof-starter-app
 
 Studios versions can be found by running:
 
-```
+```sh
 hof app versions
 ```
 
-##### Private Repositories
+##### Custom and Private Repositories
+
+The create command has a longer format enabling the use
+any git based repository or the local filesystem.
+See the [Studios Universe - Applications](/universe/applications) documentation for more information.
 
 Private repositories are supported for GitHub using
 the `GITHUB_TOKEN` environment variable.

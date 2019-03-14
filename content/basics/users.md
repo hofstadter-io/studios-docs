@@ -7,65 +7,47 @@ type: "page"
 weight: 15
 ---
 
-Your application comes with `users` out of the box.
-This includes:
-
-- login and oauth
-- password management
-- access permissions
-- admin controls
+Your application comes with __Users__ out of the box.
+The main thing you will do with users
+is give them ownership of types
+and assign auth permissions.
+This happens at the __Type__ level,
+where you design the details.
 
 Hofstadter Studios handles the common user attributes:
 
+- id
 - email
 - username
 - password
 - role
 - isActive
 
-With users, you can change the profile fields or attributes,
-as well as the translation files.
+As well as the user flow related to authenication and authorization:
+
+- login and oauth
+- password management
+- account recovery
+- access permissions
+- admin controls
+
+There are hooks and notifications for changes and other events...
+coming soon.
 
 ```
 app:
   name: "hof-starter-app"
 
   user:
-    profile:
-      fields:
-        - name: first_name
-          type: string
-          length: 64
-        - name: middle_name
-          type: string
-          length: 64
-        - name: last_name
-          type: string
-          length: 64
-        - name: title
-          type: string
-          length: 16
-        - name: suffix
-          type: string
-          length: 16
+    events:
+      ...
+    hooks:
+      ...
+
     translations:
       - name: en
         file: "translations/user/en.json"
       - name: es
         file: "translations/user/es.json"
 ```
-
-The field types can be:
-
-- __string__, with a maximum length.
-- __text__, with no limit.
-- __boolean__
-- __integer__
-- __decimal__
-- __date__
-- __time__
-- __datetime__
-
-
-
 

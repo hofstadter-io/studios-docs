@@ -13,9 +13,11 @@ of the Hofstadter Studios basic concepts.
 - [Overview](#overview)
 - [Changing the Title](#changing-the-title)
 - [Customizing the Home page](#customizing-the-home-page)
-- [Creating a Module](#creating-a-module)
-- [Custom Page](#custom-page)
-- [Custom Component](#custom-component)
+- [Creating New Functionality](#creating-new-functionaliity)
+  - [Creating a Module](#creating-a-module)
+  - [Creating a Type](#creating-a-type)
+  - [Custom Page](#custom-page)
+  - [Custom Component](#custom-component)
 
 ### Overview
 
@@ -29,7 +31,8 @@ as well as a `modules` directory,
 where your modules will go.
 
 The directory overview:
-```
+
+```sh
 app-dir/
   design/        # Main application design
   design-vendor/ # Imported modules' design
@@ -57,14 +60,14 @@ While the examples are in yaml, you can intermix json, xml, toml, and hof-lang a
 
 The layout for design (and design-vendor) is as follows:
 
-```
+```sh
 design/
-  app.yaml files...
+  app.yaml         # and other files...
   modules/
-    account/...same as blog...
+    account/       # ...same as blog...
     blog/
       module.yaml
-      type.yaml files...
+      type.yaml    # per type files...
       pages/
       componets/
       locales/
@@ -85,7 +88,7 @@ You can do this by editing:
 
 __design/app.yaml__ and changing the "title" field.
 
-```
+```yaml
 app:
   name: my-app
   title: "My Studios App"
@@ -100,7 +103,7 @@ greet the user if logged in.
 
 You can find the design in __design/pages.yaml__
 
-```
+```yaml
 app:
   name: my-app
 
@@ -118,12 +121,8 @@ app:
         - name: es
           file: pages/home/locales/es.json
 ```
-
-Add the follow to the __design/pages.yaml__ file to
-include the current user information for the page.
-
-```
-      route: "/"
+Add the following
+```yaml
       current-user: true
 ```
 
@@ -131,7 +130,7 @@ include the current user information for the page.
 
 and the content in __pages/home/content.html__
 
-```
+```jsx
 <div id="home-content">
 
 <h1>{ t('title') }</h1>
@@ -161,7 +160,7 @@ declare the data and rules,
 design the layout and styling.
 
 
-### Creating new functionality
+### Creating New Functionality
 
 You can create five main objects in __Studios__:
 
@@ -170,63 +169,77 @@ You can create five main objects in __Studios__:
 
 ##### Creating a Module
 
-```
-hof new module design/modules/<module-name>
+```sh
+hof new module "design/modules/<module-name>"
 ```
 
 ##### Creating a Type
 
-```
-hof new type design/modules/<module-name>/<type-name>
+```sh
+hof new type "design/modules/<module-name>/<type-name>"
 ```
 
 ##### Custom Page
 
 App page:
 
-```
-hof new module design/<page-name>
+```sh
+hof new module "design/<page-name>"
 ```
 
 Module page:
 
-```
-hof new module design/modules/<module-name>/<page-name>
+```sh
+hof new module "design/modules/<module-name>/<page-name>"
 ```
 
 Type page:
 
-```
-hof new module design/modules/<module-name>/<type-name>/<page-name>
+```sh
+hof new module "design/modules/<module-name>/<type-name>/<page-name>"
 ```
 
 ##### Custom Component
 
 App component:
 
-```
-hof new component design/<component-name>
+```sh
+hof new component "design/<component-name>"
 ```
 
 Module component:
 
-```
-hof new module design/modules/<module-name>/<component-name>
+```sh
+hof new component "design/modules/<module-name>/<component-name>"
 ```
 
 Type component:
 
-```
-hof new module design/modules/<module-name>/<type-name>/<component-name>
+```sh
+hof new component "design/modules/<module-name>/<type-name>/<component-name>"
 ```
 
 ##### Custom Logic
 
 Serverless functions as well as built-in hooks, handlers and, integrations.
 
-```
-hof new func <name> <runtime>
+```sh
+hof new func "<name>" "<template>"
+hof func create "<name>" "<runtime>"
+hof func "<command>" "<name>"
 ```
 
 coming soon!
+
+
+##### Custom and Private Repositories
+
+The new command has a longer format enabling the use
+any git based repository or the local filesystem.
+See the [Studios Universe - Templates](/universe/templates) documentation for more information.
+
+Private repositories are supported for GitHub using
+the `GITHUB_TOKEN` environment variable.
+
+
 

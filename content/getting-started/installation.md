@@ -18,7 +18,7 @@ Download a precompiled binary from the github
 
 ##### Homebrew
 
-```bash
+```sh
 brew install hofstadter-io/homebrew-tap/hof
 ```
 
@@ -26,7 +26,7 @@ brew install hofstadter-io/homebrew-tap/hof
 
 You can go get and compile the latest version with:
 
-```bash
+```sh
 go get github.com/hofstadter-io/hof
 ```
 

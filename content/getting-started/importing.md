@@ -28,7 +28,7 @@ options within the designs.
 
 ##### Import command
 
-```
+```sh
 hof import "#simple-blog"
 ```
 
@@ -58,7 +58,7 @@ You can create menu links
 for the modules in navbar,
 by editing the file:
 
-```
+```sh
 design/layout.yaml
 ```
 
@@ -92,7 +92,7 @@ to see the changes.
 The following is the directory layout
 of your new blog module.
 
-```
+```sh
 blog/
 │
 ├── module.yaml
@@ -159,7 +159,7 @@ to extend and override.
 
 __Start the mirrored directories__
 
-```
+```sh
 mkdir -p design/modules/blog/locales
 ```
 
@@ -182,13 +182,13 @@ type:
 
 __Create the file: `design/modules/blog/locales/en.js`__
 
-```
+```sh
 cp design-vendor/modules/blog/locales/en.js design/modules/blog/locales/en.js
 ```
 
 and add
 
-```
+```sh
 "blurb": "Blurb",
 ```
 
@@ -219,25 +219,25 @@ __Summary of changes__
 
 __Create the mirrored directory__
 
-```
+```sh
 mkdir -p design/modules/blog/pages/list
 ```
 
 __Create the file: `design/modules/blog/pages/post/list/content.html`__
 
-```
+```sh
 cp design-vendor/modules/blog/pages/post/list/content.html design/modules/blog/pages/post/list/content.html
 ```
 
 and change (around line 32)
 
-```
+```jsx
 <p className="mb-1">{ post.content.substring(0,64) }</p>
 ```
 
 to
 
-```
+```jsx
 <p className="mb-1">{ post.blurb }</p>
 ```
 
@@ -255,4 +255,13 @@ we will need to both:
 - migrate the database
 
 _(TODO dev note, add a flag to push)_
+
+##### Custom and Private Repositories
+
+The import command has a longer format enabling the use
+any git based repository or the local filesystem.
+See the [Studios Universe - Modules](/universe/modules) documentation for more information.
+
+Private repositories are supported for GitHub using
+the `GITHUB_TOKEN` environment variable.
 

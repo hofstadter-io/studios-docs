@@ -26,12 +26,12 @@ We will use a note taking application as an example.
   - [Creating a Module](#creating-a-module)
   - [Creating a Type](#creating-a-type)
   - [Pages and Components](#pages-and-components)
-  - TBD [Note Taking Example Module](#note-taking-example-module)
+  - [Note Taking Example Module](#note-taking-example-module)
 - [Content, Data, and Mutations](#content-data-and-mutations)
   - [Content JSX and SCSS](#content-jsx-and-scss)
   - [Layout and Styling Libraries](#layout-and-styling-libraries)
   - [Using Data and Mutations](#using-data-and-mutations)
-  - TBD [Note Taking Example Content](#note-taking-example-content)
+  - [Note Taking Example Content](#note-taking-example-content)
 - [Custom Logic and Events](#custom-logic-and-events)
 - [Custom and Private Repositories](#custom-and-private-repositories)
 
@@ -473,6 +473,62 @@ pages/componsntes:
 
 #### Note Taking Example Module
 
+Let’s now create a notes module, type, and page.
+We’ll fill them in after learning how.
+
+##### New module, type, and page
+
+```sh
+# create the module
+hof new module design/modules/notes
+
+# create the types
+hof new type design/modules/notes/note
+
+# create the page
+hof new page design/modules/notes/board
+```
+
+##### Output folder layout
+
+```sh
+design/modules/notes/
+│
+├── module.yaml
+├── note.yaml
+│
+├── pages
+├── components
+│
+├── locales
+│   ├── en.json
+│   └── es.json
+└── seeds
+    └── default.json
+```
+
+##### Wiring the app, modules, and types together
+
+`designs/modules.yaml`
+
+```yaml
+app:
+  name: ...
+
+  modules:
+    - account
+    - notes
+```
+
+`designs/modules/notes/module.yaml`
+
+```yaml
+module:
+  name: notes
+
+  types:
+    - note
+```
 
 
 ### Content, Data, and Mutations
@@ -611,6 +667,142 @@ The format is `mutationTypeName`.
 
 
 #### Note Taking Example Content
+
+We can now design our module, type, and page.
+
+##### Design the Module
+
+You shouldn’t have to actually do anything at this point.
+
+__design/modules/notes/module.yaml__
+
+``` yaml
+module:
+
+  name: notes
+
+  types:
+    - note
+
+  components: []
+  pages: []
+  files: []
+
+  translations:
+  - name: en
+    file: design/modules/notes/locales/en.json
+  - name: es
+    file: design/modules/notes/locales/es.json
+
+  seeds:
+    file: seeds/default.json
+```
+
+##### Design the Type
+
+This is what the file should look like.
+We are setting the owned type and adding a content field.
+
+__design/modules/notes/module.yaml__
+
+```yaml
+type:
+  name: note
+
+  owned:
+    type: has-many
+
+  auth:
+    default: true
+
+  components:
+    default: true
+
+  pages:
+    default: true
+
+  fields:
+  - name: name
+    type: string
+    length: 64
+  - name: content
+    type: text
+
+  relations: []
+
+  forms: []
+  files: []
+```
+
+##### Design the Page
+
+This is what the file should look like.
+We are setting the route to "/board",
+adding the current user, and
+injecting the users note data.
+
+__design/modules/notes/pages/board.yaml__
+
+```yaml
+### DEV TODO, need to fix logic in TypeName and Pages/Components
+# type: ...
+
+module:
+  name: board
+
+  pages:
+    - name: board
+      route: "/board”
+
+
+      style:
+        - "design/modules/notes/pages/board/style.scss"
+
+      content:
+        - "design/modules/notes/pages/board/content.html"
+
+      components: []
+
+      current-user: true
+
+      data:
+        - name: notes
+          type: type.module.notes.note
+          query:
+            type: list
+            sync: true
+
+```
+
+We’ll make this a nice card base layout.
+
+__design/modules/notes/pages/board/content.html__
+
+```
+<div className="container">
+  <h1 className="row">{ props.currentUser.username }’s Notes</h1>
+  <div className="row">
+    <div className="col">
+     { loadingNotes ? <pre>loading...</pre>
+     : props.notes.map( (edge) => {
+         let note = edge.note;
+
+         return (
+          <div key={ note.id } className="card" style={ { width: 18rem } }">
+            <div className="card-body">
+              <h5 className="card-title">{ note.name }</h5>
+              <p className="card-text">{ note.content }</p>
+              <a href={"/notes/edit/" + note.id} className="btn btn-primary">edit</a>
+            </div>
+          </div>
+         )
+
+       } )
+     }
+    </div>
+  </div>
+</div>
+```
 
 ### Custom Logic and Events
 

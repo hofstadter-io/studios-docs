@@ -29,6 +29,8 @@ so you can rapidly iterate on your ideas.
 🐢
 [Open Source](https://github.com/hofstadter-io)
 
+##### INSERT NEW DEMO VIDEO HERE
+
 #### Overview
 
 In Hofstadter Studios, you describe your application.
@@ -39,6 +41,15 @@ the rules around who can do what given their roles.
 You will also talk about how data and information
 is visualized, how interfaces look and feel,
 to how the user flow and interactions work.
+
+{{<mermaid align="left">}}
+graph LR;
+    Designs -.->|hof app push| H(Hofstadter Studios)
+    H -.->|client update & refresh| C[React/Native, SDKs]
+    H -.->|server update & scaling| S[GraphQL, REST APIs]
+    H -.->|migrations & management| DB[Databases & Proxies]
+    H -.->|triggers, events & flows| SS[Serverless System]
+{{< /mermaid >}}
 
 Hofstadter Studios will build you a live, real-time
 application that you can rapidly iterate on.
@@ -69,9 +80,6 @@ to the business logic and data sources,
 you have the ability to style your
 application and create that
 desired experience or process.
-
-Enough of the high-level,
-let's see some designs.
 
 #### Designs
 

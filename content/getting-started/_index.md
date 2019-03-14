@@ -19,7 +19,7 @@ connecting the tool to your live server.
 1. [Designing](./designing)
 1. [Importing](./importing)
 1. [Deploying](./deploying)
-1. [Updating](./updating)
+1. [Lifecycle](./lifecycle)
 1. [Trouble Shooting](./trouble-shooting)
 1. [Next Steps](./next-steps)
 

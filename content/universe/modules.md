@@ -26,8 +26,8 @@ Make a Pull Request to have your __Studios__ module added here!
 
 #### Using the import command
 
-```
-hof import <bundle>
+```sh
+hof import "<bundle>"
 ```
 
 - `bundle`: `<repo-url>@<git-ref>#<sub-dir>`
@@ -36,4 +36,13 @@ hof import <bundle>
     - sub-dir: into the repository, this is how collection repos are handled.
 
 This will place the bundles design in the `design-vendor` directory.
+
+#### Custom and Private Repositories
+
+The import command has a longer format enabling the use
+any git based repository or the local filesystem.
+See the [Studios Universe - Modules](/universe/modules) documentation for more information.
+
+Private repositories are supported for GitHub using
+the `GITHUB_TOKEN` environment variable.
 

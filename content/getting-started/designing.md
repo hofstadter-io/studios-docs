@@ -242,13 +242,13 @@ __Modules__ group types and can include
 pages, components, translations, and other files.
 You can create a module by running:
 
-##### new command
+##### hof new module
 
 ```sh
 hof new module "design/modules/<module-name>"
 ```
 
-##### directory layout
+##### module directory layout
 
 This will create a skeleton of
 directories, designs, and other files:
@@ -272,10 +272,7 @@ design/modules/
         └── default.json
 ```
 
-We’ll continue exploring these files
-the remainder of this page.
-
-##### design file
+##### module design file
 
 ```yaml
 module:
@@ -301,13 +298,13 @@ __Types__ represent your application’s
 data or models, the fields, ownership, visibility,
 the relationships, permissions, rules, hooks, events, and more.
 
-##### new command
+##### hof new type
 
 ```sh
 hof new type "design/modules/<module-name>/<type-name>"
 ```
 
-##### directory layout
+##### type directory layout
 
 The new type command only creates a single file.
 
@@ -319,7 +316,7 @@ design/modules/
     └── <type-name>.yaml
 ```
 
-##### design file
+##### type design file
 
 ```yaml
 type:
@@ -364,7 +361,7 @@ at the app, module, or type level.
 You can substitue “component” for “page”
 in the subsections that follow.
 
-##### new command
+##### hof new page
 
 New Pages can appear under
 
@@ -379,7 +376,7 @@ hof new page "design/modules/<module-name>/<page-name>"
 hof new page "design/modules/<module-name>/<type-name>/<page-name>"
 ```
 
-##### directory layout
+##### page directory layout
 
 ```
 design/modules/
@@ -395,7 +392,7 @@ design/modules/
 
 ```
 
-##### Content Design File
+##### page content design
 
 
 The design file layout for pages and components:
@@ -426,13 +423,13 @@ You can find the full format starting with the
 [page snippet in the reference section](/reference/designs/common/helpers/#pages-snippet)
 
 
-##### Injected Data Design
+##### page data design
 
 The current user and type data can be injected into pages and components.
 You can combine data from any type, local or across modules.
 
 ```
-pages/componsntes:
+pages/components:
   - name: ...
     ...
 

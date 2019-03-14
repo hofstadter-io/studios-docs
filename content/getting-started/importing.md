@@ -155,13 +155,13 @@ in your application's `design` folder.
 
 ##### Extend the Design
 
-Designs from the `design-vendor` directory
-can be extended and overriden.
-This means you can write just the new design
-for your desired changes.
+You can extend and override module designs and files
+imported to the `design-vendor` directory.
+This means you can add just the new designs and files
+to express your desired changes.
 Create the same folder / file structure,
-as well as the same, minimal object structure,
-to extend and override.
+as well as the same, minimal object structure for designs.
+
 
 __Start the mirrored directories__
 

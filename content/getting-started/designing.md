@@ -185,7 +185,10 @@ design the layout and styling.
 You can create five main objects in __Studios__:
 
 - modules - collections of types, pages, and components.
-- types - the objects in your system
+- types - the data objects in your system
+- pages - for apps, modules, and types
+- components - for apps, modules, and types
+- functions - serverless capabilities coming soon.
 
 ##### Creating a Module
 

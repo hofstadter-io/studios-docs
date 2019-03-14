@@ -1,6 +1,6 @@
 ---
 title: "Universe"
-date: 2019-03-11T22:23:33-06:00
+date: 2019-03-11
 draft: false
 type: "page"
 

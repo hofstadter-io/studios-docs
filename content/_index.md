@@ -1,6 +1,6 @@
 ---
 title: "Hofstadter Studios Documentations"
-date: 2018-10-08
+date: 2019-03-14
 draft: false
 type: "page"
 ---
@@ -14,9 +14,9 @@ __Hofstadter Studios__ is a
 declarative programming and rapid development platform.
 You describe your idea as "designs",
 _the single-source of truth_, and
-your real-time application updates to reflect your changes.
+your real-time application updates to reflect the changes.
 __Hofstadter Studios__ will generate a
-full implementation and handle its management
+full implementation and handle the management
 so you can rapidly iterate on your ideas.
 
 [Getting Started](./getting-started)
@@ -31,37 +31,36 @@ so you can rapidly iterate on your ideas.
 
 ##### INSERT NEW DEMO VIDEO HERE
 
-#### Overview
+#### Hofstadter Studios
 
-In Hofstadter Studios, you describe your application.
-You can talk about users and their profiles,
+In Hofstadter Studios you describe your application.
+You design users and their profiles,
 the kinds of things they can do,
 the relations they have with their resources and each other,
 the rules around who can do what given their roles.
-You will also talk about how data and information
-is visualized, how interfaces look and feel,
-to how the user flow and interactions work.
+You then specify how
+data is visualized,
+interfaces look and feel,
+the user flows and much more,
+all while having control down to the pixel.
+An event and serverless system enables you
+to customize the logic and take extra actions.
+
+Hofstadter Studios will build you a live, real-time
+application that you can rapidly iterate on.
+Just __hof app push__ and your application is sent
+to Studios where the changes are understood
+and applied as neccessary throught the technology stack.
+Databases will be migrated, code will be updated, clients will be refreshed.
 
 {{<mermaid align="left">}}
-graph LR;
+graph TB;
     Designs -.->|hof app push| H(Hofstadter Studios)
     H -.->|client update & refresh| C[React/Native, SDKs]
     H -.->|server update & scaling| S[GraphQL, REST APIs]
     H -.->|migrations & management| DB[Databases & Proxies]
     H -.->|triggers, events & flows| SS[Serverless System]
 {{< /mermaid >}}
-
-Hofstadter Studios will build you a live, real-time
-application that you can rapidly iterate on.
-Domain Specific Languages are used to drastically increase
-the word to powering technology ratio.
-In a few hundred lines you can create applications
-full of features and ready for users.
-Change your design, do a __hof push__
-and the application updates itself
-automatically on all the devices.
-When your ready to send the latest version
-just do a __hof deploy__ and it does.
 
 Behind the scenes Hofstadter Studios
 is creating and managing
@@ -81,7 +80,7 @@ you have the ability to style your
 application and create that
 desired experience or process.
 
-#### Designs
+#### Applications and Designs
 
 Designs express and idea in special languages,
 as a group referred to as Domain Specific Languages (DSL).

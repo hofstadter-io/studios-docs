@@ -1,6 +1,6 @@
 ---
 title: "Installing the CLI"
-date: 2019-03-02T11:58:26-06:00
+date: 2019-03-02
 draft: false
 type: "page"
 

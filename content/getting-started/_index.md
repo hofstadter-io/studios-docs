@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-date: 2019-03-03T11:58:26-06:00
+date: 2019-03-14
 draft: false
 type: "page"
 

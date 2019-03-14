@@ -1,6 +1,6 @@
 ---
 title: "Applications"
-date: 2018-03-12T00:00:00-06:00
+date: 2018-03-12
 draft: false
 type: "page"
 

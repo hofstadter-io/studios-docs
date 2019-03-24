@@ -39,14 +39,16 @@ System:   running
 
 your application is running.
 
-Now we can create some initial data with:
+Now we can migrate and seed the database with entries using:
 
 ```sh
 hof db seed
 ```
 
 Once this is complete,
-you can follow the link to use your app.
+you can follow the link
+from `hof app status`
+to use your app.
 
 #### Shutdown an Application
 

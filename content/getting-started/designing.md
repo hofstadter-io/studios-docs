@@ -685,7 +685,8 @@ module:
   name: notes
 
   types:
-    - note
+    - name: note
+      type: type.modules.notes.note
 
   components: []
   pages: []
@@ -698,7 +699,7 @@ module:
     file: design/modules/notes/locales/es.json
 
   seeds:
-    file: seeds/default.json
+    file: design/modules/notes/seeds/default.json
 ```
 
 ##### Design the Type
@@ -714,6 +715,10 @@ type:
 
   owned:
     type: has-many
+
+  visibility:
+    enable: true
+    default: false
 
   auth:
     default: true
@@ -744,7 +749,7 @@ We are setting the route to "/board",
 adding the current user, and
 injecting the users note data.
 
-__design/modules/notes/pages/board.yaml__
+__design/modules/notes/Pagesboard.yaml__
 
 ```yaml
 ### DEV TODO, need to fix logic in TypeName and Pages/Components
@@ -787,25 +792,83 @@ __design/modules/notes/pages/board/content.html__
   <div className="row">
     <div className="col">
      { loadingNotes ? <pre>loading...</pre>
-     : props.notes.map( (edge) => {
-         let note = edge.note;
+     : (props.notes && props.notes.edges && props.notes.edges.length > 0 ?
+     props.notes.edges.map( (edge) => {
+         let note = edge.node;
 
          return (
-          <div key={ note.id } className="card" style={ { width: 18rem } }">
+          <div key={ note.id } className="card" style={ { width: "18rem" } }>
             <div className="card-body">
               <h5 className="card-title">{ note.name }</h5>
               <p className="card-text">{ note.content }</p>
-              <a href={"/notes/edit/" + note.id} className="btn btn-primary">edit</a>
+              <a href={"/note/edit/" + note.id} className="btn btn-primary">edit</a>
             </div>
           </div>
          )
 
        } )
+       : <p>no notes</p> )
      }
     </div>
   </div>
 </div>
 ```
+
+##### Navbar menu items
+
+We'll want to provide a way for users to navigate
+to our new module.
+
+__design/layout.yaml__
+
+```yaml
+app:
+  name: ...
+  
+  ...
+
+  layout:
+    ...
+
+    navbar:
+      ...
+
+      leftItems:
+        - name: board
+          href: "/board"
+          roles:
+            - user
+            - admin
+        - name: notes
+          href: "/note/toc"
+          roles:
+            - user
+            - admin
+        ...
+      ...
+    ...
+  ...
+```
+
+##### Updating the application
+
+We can update our application now that
+we have our new module, type, and page designed.
+
+Start by pushing the code:
+
+```sh
+hof app push
+```
+
+Once the code is pushed, we need to migrate the database:
+
+```sh
+hof db migrate
+```
+
+Once the database is migrated, you can create, update, delete, and view
+your notes.
 
 ### Custom Logic and Events
 

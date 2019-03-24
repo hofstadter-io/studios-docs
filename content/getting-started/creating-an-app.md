@@ -30,12 +30,47 @@ Now change to this directory.
 cd "<app-name>"
 ```
 
-##### Pushing and Deploying
+##### Pushing, Deploying, and Database
 
 Before you can use your application,
 you will also need to push and deploy it.
-We will do this in a couple of sections
-after making some initial changes and updates.
+
+```sh
+hof app push
+hof app deploy
+```
+
+The first deployment will take about 5 minutes.
+You can check the status with:
+
+```sh
+hof app status
+```
+
+Once you see:
+
+```sh
+https://<app-name>.<username>.live.hofstadter.io
+<username> <app-name>
+Client:   running
+Server:   running
+System:   running
+```
+
+your application is running.
+
+
+Now create the initial users with:
+
+```sh
+hof db seed
+```
+
+Once this is complete,
+you can follow the link
+from `hof app status`
+to use your app.
+
 
 #### Full Create Command
 

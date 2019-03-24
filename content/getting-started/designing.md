@@ -197,6 +197,16 @@ to:
 </div>
 ```
 
+##### Update the application
+
+Run
+
+```sh
+hof app push
+```
+
+and you will see your application update.
+
 ##### What we did
 
 In a few lines,
@@ -384,11 +394,11 @@ design/modules/
 │   ├── <type-name>.yaml
 │   │   │
 │   │   │   # New Page Layout
-└───└───└── pages
-            ├── <page-name>.yaml
-            └── <page-name>
-                ├── content.html
-                └── style.scss
+└───└───└── Page<page-name>.yaml
+            └── pages
+                └── <page-name>
+                    ├── content.html
+                    └── style.scss
 
 ```
 

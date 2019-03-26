@@ -798,7 +798,7 @@ __design/modules/notes/pages/board/content.html__
   <h1 className="row">{ props.currentUser.username }’s Notes</h1>
   <div className="row">
     <div className="col">
-     { loadingNotes ? <pre>loading...</pre>
+     { props.loadingNotes ? <pre>loading...</pre>
      : (props.notes && props.notes.edges && props.notes.edges.length > 0 ?
      props.notes.edges.map( (edge) => {
          let note = edge.node;
@@ -808,7 +808,9 @@ __design/modules/notes/pages/board/content.html__
             <div className="card-body">
               <h5 className="card-title">{ note.name }</h5>
               <p className="card-text">{ note.content }</p>
-              <a href={"/note/edit/" + note.id} className="btn btn-primary">edit</a>
+              <Link className="btn btn-primary" to={ "/note/edit/" + note.id }>
+                edit
+              </Link>
             </div>
           </div>
          )
@@ -847,7 +849,7 @@ app:
             - user
             - admin
         - name: notes
-          href: "/note/toc"
+          href: "/note/list"
           roles:
             - user
             - admin

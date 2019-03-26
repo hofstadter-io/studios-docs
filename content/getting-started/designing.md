@@ -520,6 +520,8 @@ design/modules/notes/
 
 ##### Wiring the app, modules, and types together
 
+First add the name of the module to the application.
+
 `designs/modules.yaml`
 
 ```yaml
@@ -531,6 +533,10 @@ app:
     - notes
 ```
 
+
+Then, in the module design,
+add the name and type location.
+
 `designs/modules/notes/module.yaml`
 
 ```yaml
@@ -538,7 +544,8 @@ module:
   name: notes
 
   types:
-    - note
+    - name: note
+      type: type.modules.notes.note
 ```
 
 

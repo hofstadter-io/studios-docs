@@ -97,6 +97,15 @@ Studios versions can be found by running:
 hof app versions
 ```
 
+#### Logging into your application
+
+By default, one admin and two users are created.
+You can find the passwords in __seeds/users.json__
+and we recommend changing them from the public defaults.
+This way, when you reseed your database, the changed
+passwords will be reused.
+
+
 #### Custom and Private Repositories
 
 The create command has a longer format enabling the use

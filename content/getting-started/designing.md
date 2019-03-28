@@ -190,7 +190,7 @@ to:
 ```jsx
 <div id="home-content">
 
-<h1>{ t('messages.hello') }, { props.currentUser.username }</h1>
+<h1>{ t('messages.hello') }, { props.currentUser ? props.currentUser.username : "anonymous" }</h1>
 
 <p>Welcome to my first Studios app!</p>
 

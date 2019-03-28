@@ -173,7 +173,7 @@ Add the following
 
 ##### Update the content
 
-change the content in __pages/home/content.html__ from:
+change the content in __pages/home/home.html__ from:
 
 ```jsx
 <div id="home-content">

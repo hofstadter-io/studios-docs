@@ -522,7 +522,7 @@ design/modules/notes/
 
 First add the name of the module to the application.
 
-`designs/modules.yaml`
+`design/modules.yaml`
 
 ```yaml
 app:
@@ -537,7 +537,7 @@ app:
 Then, in the module design,
 add the name and type location.
 
-`designs/modules/notes/module.yaml`
+`design/modules/notes/module.yaml`
 
 ```yaml
 module:

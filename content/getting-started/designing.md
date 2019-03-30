@@ -522,7 +522,7 @@ design/modules/notes/
 
 First add the name of the module to the application.
 
-`designs/modules.yaml`
+`design/modules.yaml`
 
 ```yaml
 app:
@@ -537,7 +537,7 @@ app:
 Then, in the module design,
 add the name and type location.
 
-`designs/modules/notes/module.yaml`
+`design/modules/notes/module.yaml`
 
 ```yaml
 module:
@@ -756,14 +756,14 @@ We are setting the route to "/board",
 adding the current user, and
 injecting the users note data.
 
-__design/modules/notes/Pagesboard.yaml__
+__design/modules/notes/Pageboard.yaml__
 
 ```yaml
 ### DEV TODO, need to fix logic in TypeName and Pages/Components
 # type: ...
 
 module:
-  name: board
+  name: notes
 
   pages:
     - name: board

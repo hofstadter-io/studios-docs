@@ -763,7 +763,7 @@ __design/modules/notes/Pageboard.yaml__
 # type: ...
 
 module:
-  name: board
+  name: notes
 
   pages:
     - name: board

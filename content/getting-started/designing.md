@@ -714,7 +714,7 @@ module:
 This is what the file should look like.
 We are setting the owned type and adding a content field.
 
-__design/modules/notes/module.yaml__
+__design/modules/notes/note.yaml__
 
 ```yaml
 type:

@@ -1,6 +1,6 @@
 ---
 title: "Importing"
-date: 2019-03-13
+date: 2019-04-01
 draft: false
 type: "page"
 
@@ -241,13 +241,19 @@ It assumes we are deploying for the first time,
 so if you already have deployed your application,
 you can skip some steps.
 
-_Note_ that because we have changed the shape of the data,
-we will need to both:
+Run the following to update the code and database:
 
-- push the application code
-- migrate the database
+```sh
+hof app push
+hof db reset
+```
 
-_(TODO dev note, add a flag to push, so one can migrate as well)_
+When you want to checkpoint the database, run:
+
+```sh
+hof db seed
+```
+
 
 ### Custom and Private Repositories
 

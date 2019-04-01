@@ -1,6 +1,6 @@
 ---
 title: "Designing"
-date: 2019-03-14
+date: 2019-04-01
 draft: false
 type: "page"
 
@@ -17,21 +17,26 @@ and your live server will update to reflect the changes.
 The next few _Getting Started_ steps will walk you through
 some of the __Hofstadter Studios__ concepts.
 We will use a note taking application as an example.
+Most sections are explanitory.
+Those starting with "Note Taking Example - ..."
+are the sections containing
+files to create or update,
+as well as the __hof__ commands to run.
 
 - [Application Folder](#application-folder)
 - [Design Folder](#design-folder)
-- [Changing the Title](#changing-the-title)
-- [Customizing the Home page](#customizing-the-home-page)
+- [Note Taking Example - First Changes](#note-taking-example-first-changes)
 - [Creating New Functionality](#creating-new-functionality)
   - [Creating a Module](#creating-a-module)
   - [Creating a Type](#creating-a-type)
   - [Pages and Components](#pages-and-components)
-  - [Note Taking Example Module](#note-taking-example-module)
+- [Note Taking Example - Create](#note-taking-example-create)
 - [Content, Data, and Mutations](#content-data-and-mutations)
   - [Content JSX and SCSS](#content-jsx-and-scss)
   - [Layout and Styling Libraries](#layout-and-styling-libraries)
   - [Using Data and Mutations](#using-data-and-mutations)
-  - [Note Taking Example Content](#note-taking-example-content)
+- [Note Taking Example - Content](#note-taking-example-content)
+- [Note Taking Example - Checkpoint](#note-taking-example-checkpoint)
 - [Custom Logic and Events](#custom-logic-and-events)
 - [Custom and Private Repositories](#custom-and-private-repositories)
 
@@ -123,7 +128,12 @@ More detailed information is available
 in the other major sections.
 
 
-### Changing the Title
+### Note Taking Example First Changes
+
+We will start by updating the title and homepage,
+and then pushing the code to see the changes.
+
+#### Changing the Title
 
 We will start by making our own updates to the app, modules, types, pages, and components.
 
@@ -139,14 +149,17 @@ app:
   title: "My Studios App"
 ```
 
-### Customizing the Home Page
+#### Customizing the Home Page
 
 Let's change the home page to
 greet the user if logged in.
 
 ##### Update the design
 
-You can find the design in __design/pages.yaml__
+First, we need to inject the
+current user data into the page context.
+
+You can find the design in __design/pages.yaml__:
 
 ```yaml
 app:
@@ -165,27 +178,18 @@ app:
           file: pages/home/locales/en.json
         - name: es
           file: pages/home/locales/es.json
-```
-Add the following
-```yaml
+
+
+      # Add the following
       current-user: true
 ```
 
 ##### Update the content
 
-change the content in __pages/home/home.html__ from:
+Then, we can add JSX code
+to render the user's username.
 
-```jsx
-<div id="home-content">
-
-<h1>{ t('title') }</h1>
-
-<p>{ t('messages.hello') } from Hof Starter App</p>
-
-</div>
-```
-
-to:
+Change the content in __pages/home/home.html__ to:
 
 ```jsx
 <div id="home-content">
@@ -199,7 +203,10 @@ to:
 
 ##### Update the application
 
-Run
+Now we can update the application
+to see the changes.
+
+Run:
 
 ```sh
 hof app push
@@ -478,7 +485,7 @@ pages/components:
 [Full Reference](/reference/designs/common/helpers/#data-snippet)
 
 
-#### Note Taking Example Module
+### Note Taking Example Module
 
 Let’s now create a notes module, type, and page.
 We’ll fill them in after learning how.
@@ -547,6 +554,21 @@ module:
     - name: note
       type: type.modules.notes.note
 ```
+
+##### What we did
+
+We started to scaffold out our
+new "notes" module and "note" type.
+We first created the files
+with the __hof__ tool and then wired
+the type to the module
+and
+the module ot the app.
+
+Before we push any changes,
+we need to learn about
+filling in this new
+module and type with content.
 
 
 ### Content, Data, and Mutations
@@ -676,7 +698,7 @@ The format is `mutationTypeName`.
 ```
 
 
-#### Note Taking Example Content
+### Note Taking Example Content
 
 We can now design our module, type, and page.
 
@@ -859,25 +881,91 @@ app:
   ...
 ```
 
-##### Updating the application
+##### Adding seed data
 
-We can update our application now that
-we have our new module, type, and page designed.
+You can create example notes
+so that when the database updated,
+there is existing data.
 
-Start by pushing the code:
+In the file __design/modules/notes/seeds/default.json__,
+set the contents to:
 
-```sh
+```json
+{
+  "notes": [
+    {
+      "owner": "admin",
+      "title": "my note",
+      "content": "test content"
+    },
+    {
+      "owner": "bob",
+      "title": "some note",
+      "content": "eh?"
+    },
+    {
+      "owner": "alice",
+      "title": "a list",
+      "content": "item1, item2, item3"
+    }
+  ]
+}
+```
+
+##### Development updates
+
+As you change your designs and files,
+you can update your live application.
+
+When you:
+
+- create a new type or module
+- change the seed data
+- change a type's field, ownership, or visibility
+
+There is a two step process for updating the application:
+
+```
 hof app push
+hof db reset
 ```
 
-Once the code is pushed, we need to migrate the database:
+This will:
+
+1. push the code, updating the client and server
+2. reset, migrate, and seed the database
+
+Once the database is reset, you can
+create, update, delete, and view your notes.
+You can continue doing this until
+you are happy with your application
+and are ready to checkpoint the changes.
+
+
+
+### Note Taking Example Checkpoint
+
+To make a lasting checkpoint to your
+application, we need to create a migration.
+Ensure that the latest code has been pushed to the server.
+
+To make a checkpoint, run:
 
 ```sh
-hof db migrate
+hof db seed
 ```
 
-Once the database is migrated, you can create, update, delete, and view
-your notes.
+This runs the same process as reset,
+but also checkpoints the database schema,
+so that when you reset again,
+this is your starting point.
+
+When making changes to a production deployment,
+we instead run `hof db migrate`.
+This only applies the updates
+and prevents data from being lost.
+
+
 
 ### Custom Logic and Events
 

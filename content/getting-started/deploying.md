@@ -1,6 +1,6 @@
 ---
 title: "Deploying"
-date: 2019-03-13
+date: 2019-04-01
 draft: false
 type: "page"
 
@@ -49,6 +49,26 @@ Once this is complete,
 you can follow the link
 from `hof app status`
 to use your app.
+
+#### Updating an Application
+
+During the course of development
+you will be pushing changes
+and updating the database.
+
+Run the first or both, depending on the change:
+
+```sh
+hof app push
+hof db reset
+```
+
+When you want to checkpoint the database, run:
+
+```sh
+hof db seed
+```
+
 
 #### Shutdown an Application
 

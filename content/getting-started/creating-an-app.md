@@ -16,7 +16,9 @@ based on the [Apollo Universal Starter Kit](https://github.com/sysgears/apollo-u
 There are a number of starting applications available on GitHub.
 A known list is maintained on [Studios Universe - Applications](/universe/applications).
 
-To create a new application from the default, run:
+To create a new application from the default, run the following.
+
+Your application name should only contain lower-case letters and `-` hyphens.
 
 ```sh
 hof app create "<app-name>"
@@ -104,6 +106,11 @@ You can find the passwords in __seeds/users.json__
 and we recommend changing them from the public defaults.
 This way, when you reseed your database, the changed
 passwords will be reused.
+
+__Note, this is a different user and login
+from your Hofstadter Studios account.
+You application has it's own set of
+users, modules, types, and pages.__
 
 
 #### Custom and Private Repositories

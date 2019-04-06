@@ -106,6 +106,23 @@ This way, when you reseed your database, the changed
 passwords will be reused.
 
 
+#### Modifying the initial users
+
+If you want to change the initial users,
+you will have to make changes in two places.
+
+First, __seeds/users.json__, where the user object is filled in.
+Second, __design-vendor/modules/account/seeds/default.json__,
+where the profile and account for the default account module are.
+You can follow the [process for making seed data in the next section](/getting-started/designing/#adding-seed-data),
+copying the same file from the same path under the `design-vendor` directory.
+
+Also note, that if you have imported any modules,
+any default or custom seed files may need to be updated.
+You can also put all of your seeds into the same file
+and adjust the references within the modules’ `module.yaml` file.
+
+
 #### Custom and Private Repositories
 
 The create command has a longer format enabling the use

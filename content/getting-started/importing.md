@@ -84,7 +84,7 @@ app:
 
         # the new content
         - name: posts
-          route: "/posts"
+          href: "/posts"
           roles:
             - user
             - admin
@@ -182,7 +182,7 @@ type:
 ##### Copy the file: `design/modules/blog/locales/en.js`
 
 ```sh
-cp design-vendor/modules/blog/locales/en.js design/modules/blog/locales/en.js
+cp design-vendor/modules/blog/locales/en.json design/modules/blog/locales/en.json
 ```
 
 and add
@@ -213,7 +213,7 @@ to the json
 ##### Create the mirrored directory
 
 ```sh
-mkdir -p design/modules/blog/pages/list
+mkdir -p design/modules/blog/pages/post/list
 ```
 
 ##### Copy the file: `design/modules/blog/pages/post/list/content.html`

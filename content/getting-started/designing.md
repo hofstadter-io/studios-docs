@@ -729,6 +729,11 @@ module:
 
   seeds:
     file: design/modules/notes/seeds/default.json
+    type:
+     - name: note
+       data: notes
+       type: type.modules.notes.note
+
 ```
 
 ##### Design the Type
@@ -804,7 +809,7 @@ module:
 
       data:
         - name: notes
-          type: type.module.notes.note
+          type: type.modules.notes.note
           query:
             type: list
             sync: true

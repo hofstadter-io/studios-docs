@@ -729,7 +729,7 @@ module:
 
   seeds:
     file: design/modules/notes/seeds/default.json
-    type:
+    types:
      - name: note
        data: notes
        type: type.modules.notes.note
@@ -772,7 +772,7 @@ type:
 
   relations: []
 
-  forms: []
+  # forms: []
   files: []
 ```
 

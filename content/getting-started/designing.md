@@ -917,6 +917,34 @@ set the contents to:
 }
 ```
 
+##### Adding translation data
+
+In order to support multi-linual applications,
+we need to supply translation files.
+These are JSON documents with key to word mappings.
+We will only be setting the english mapping for now.
+You can learn more about translations and internationalization
+in other sections of the documentation.
+
+In the file __design/modules/notes/locales/en.json__,
+set the contents to:
+
+```json
+{
+  "note": {
+    "field": {
+      "name": "Name",
+      "content": "Content",
+      "isPublic": "Public"
+    },
+    "btn": {
+      "submit": "Submit"
+    }
+  }
+
+}
+```
+
 ##### Development updates
 
 As you change your designs and files,

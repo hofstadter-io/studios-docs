@@ -980,24 +980,24 @@ and are ready to checkpoint the changes.
 
 To make a lasting checkpoint to your
 application, we need to create a migration.
-Ensure that the latest code has been pushed to the server.
+This 
+
+Ensure that the latest code has been pushed to the server
+and you have run the database reset
+so that the schema is up-do-date.
 
 To make a checkpoint, run:
 
 ```sh
-hof db seed
+hof db migrate
 ```
 
-This runs the same process as reset,
-but also checkpoints the database schema,
-so that when you reset again,
-this is your starting point.
-
-When making changes to a production deployment,
-we instead run `hof db migrate`.
-This only applies the updates
-and prevents data from being lost.
-
+This will run the checkpointing process
+and ensure your database never regresses
+before this point in time.
+You can now make new changes
+and repeat the push / reset
+development workflow.
 
 
 ### Custom Logic and Events

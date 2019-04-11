@@ -900,17 +900,17 @@ set the contents to:
   "notes": [
     {
       "owner": "admin",
-      "title": "my note",
+      "name": "my note",
       "content": "test content"
     },
     {
       "owner": "bob",
-      "title": "some note",
+      "name": "some note",
       "content": "eh?"
     },
     {
       "owner": "alice",
-      "title": "a list",
+      "name": "a list",
       "content": "item1, item2, item3"
     }
   ]

@@ -989,7 +989,7 @@ so that the schema is up-do-date.
 To make a checkpoint, run:
 
 ```sh
-hof db migrate
+hof db checkpoing
 ```
 
 This will run the checkpointing process

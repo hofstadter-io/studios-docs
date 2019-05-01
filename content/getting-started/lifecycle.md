@@ -56,22 +56,41 @@ type:
   relations: ...
 ```
 
-##### Only migrate
+##### Update the development database
 
-```sh
-hof db migrate
+While developing, you will be changing the
+shape and relations of you data and models.
+To make your development server match the
+latest state you desire, run:
+
+```
+hof db reset
 ```
 
-##### Migrate and reset the data
+##### Create a checkpoint
+
+When you are ready to update your production,
+user facing server, you will create a checkpoing.
+To create a checkpoint for your
+This will create a new set of migrations
+and move the "latest" to the current state.
 
 ```sh
-hof db seed
+hof db checkpoint
 ```
+
+Now, when you reset, the database is reset to this point.
+This will overwrite the database with the seed data
+and should nly be sued in development.
+
+_The checkpoint command will not effect your data.
+It will only make the outstanding migrations
+and create a new point where reset works from (in development)._
 
 ##### Completely reset the database
 
 ```sh
-hof db reset
+hof db reset --hard
 ```
 
 __This will reset the tables, migration history,
@@ -93,8 +112,11 @@ Then, do the app and database updates:
 
 ```sh
 hof app push
-hof db seed
+hof db checkpiont
 ```
+
+_(this gets harder with development, and the interaction or replication
+with / for production. More notes and documentation needed)_
 
 and then making then name
 the new name.
@@ -130,6 +152,8 @@ As we find more of these cases,
 we will add extra configuration and transformations
 to enable the process to become more smooth.
 
+Please [reach out to us](/getting-help)
+if you are engaging is any complex use-cases.
 
 
 ### Function Lifecycle

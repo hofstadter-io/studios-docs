@@ -60,13 +60,6 @@ The application directory overview:
 ├── design/            # your design
 ├── design-vendor/     # imported modules
 │
-│   # Main non-design files
-├── pages/             # for page content and layouts
-├── translations/      # and multilingual assets
-├── seeds/             # application seed data
-├── custom/            # for custom files
-├── components/        # for component content and layouts
-│
 │   # secrets are not uploaded with a push
 │   # these are handled differently
 ├── secrets/     # for application secrets
@@ -101,6 +94,12 @@ design
 │
 ├── imports.yaml  # NPM imports
 ├── modules.yaml  # list of modules to enable
+│
+│   # Application non-design files
+├── pages/             # for page content and layouts
+├── components/        # for component content and layouts
+├── translations/      # and multilingual assets
+├── seeds/             # application seed data
 │
 │
 │   # Module and Type Files
@@ -170,14 +169,14 @@ app:
     - name: home
       route: "/"
       style:
-        - "pages/home/home.scss"
+        - "design/pages/home/home.scss"
       content:
-        - "pages/home/home.html"
+        - "design/pages/home/home.html"
       translations:
         - name: en
-          file: pages/home/locales/en.json
+          file: design/pages/home/locales/en.json
         - name: es
-          file: pages/home/locales/es.json
+          file: design/pages/home/locales/es.json
 
 
       # Add the following
@@ -189,7 +188,7 @@ app:
 Then, we can add JSX code
 to render the user's username.
 
-Change the content in __pages/home/home.html__ to:
+Change the content in __design/pages/home/home.html__ to:
 
 ```jsx
 <div id="home-content">
@@ -401,7 +400,7 @@ design/modules/
 │   ├── <type-name>.yaml
 │   │   │
 │   │   │   # New Page Layout
-└───└───└── Page<page-name>.yaml
+└───└───└── page-<page-name>.yaml
             └── pages
                 └── <page-name>
                     ├── content.html
@@ -989,7 +988,7 @@ so that the schema is up-do-date.
 To make a checkpoint, run:
 
 ```sh
-hof db checkpoing
+hof db checkpoint
 ```
 
 This will run the checkpointing process

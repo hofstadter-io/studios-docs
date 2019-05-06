@@ -65,12 +65,12 @@ your application is running.
 Now create the initial users with:
 
 ```sh
-hof db seed
+hof db reset
 ```
 
 Once this is complete,
 you can follow the link
-from `hof app status`
+from `hof app status` above
 to use your app.
 
 
@@ -102,7 +102,7 @@ hof app versions
 #### Logging into your application
 
 By default, one admin and two users are created.
-You can find the passwords in __seeds/users.json__
+You can find the passwords in __design/seeds/users.json__
 and we recommend changing them from the public defaults.
 This way, when you reseed your database, the changed
 passwords will be reused.
@@ -118,7 +118,7 @@ users, modules, types, and pages.__
 If you want to change the initial users,
 you will have to make changes in two places.
 
-First, __seeds/users.json__, where the user object is filled in.
+First, __design/seeds/users.json__, where the user object is filled in.
 Second, __design-vendor/modules/account/seeds/default.json__,
 where the profile and account for the default account module are.
 You can follow the [process for making seed data in the next section](/getting-started/designing/#adding-seed-data),

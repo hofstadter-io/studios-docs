@@ -11,10 +11,12 @@ To work with __Hofstadter Studios__ you will need the __hof__ CLI tool.
 __hof__ is available for all major operation systems
 and architectures. Thank You Golang Developers and Community!
 
-##### Precompiled Binaries
+### Precompiled Binaries
 
 Download a precompiled binary from the github
 [releases page](https://github.com/hofstadter-io/hof/releases).
+
+### Other Options
 
 ##### Homebrew
 
@@ -35,7 +37,7 @@ to ensure compatibility and simplicity.
 You will also need your `GOPATH` and `$GOPATH/bin`
 added to your `PATH`.
 
-##### Test the installation
+### Test the installation
 
 Run `hof help` to make sure the tool is available.
 
@@ -44,6 +46,6 @@ __Hofstadter Studios__ system.
 
 ##### Windows Users
 
-There may be issues with your anti-virus for
-trusting the binary and the "`$HOME/.hof`" directory.
+There may be issues with your anti-virus and
+trusting the binary as well as the "`$HOME/.hof`" directory.
 

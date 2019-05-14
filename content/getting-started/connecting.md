@@ -16,7 +16,7 @@ hof config set-context "<context-name>" "<username>" "<apikey>"
 
 - `context-name` can be anything
 - `username` is your username
-- `apikey` can be found in your [profile](https://studios.studios.live.hofstadter.io/profile)
+- `apikey` can be found in your [profile](https://studios.hofstadter.io/profile)
 
 
 You can verify your configuration with:

@@ -44,7 +44,7 @@ home = [ "HTML", "RSS", "JSON"]
 
 
 [[menu.shortcuts]]
-name = "<i class='fa fa-code'></i> <label>04-01-2019</label>"
+name = "<i class='fa fa-code'></i> <label>05-13-2019</label>"
 url = "/changelog"
 weight = 5
 
@@ -60,5 +60,5 @@ weight = 20
 
 [[menu.shortcuts]]
 name = "<i class='fa fa-flask'></i> <label>Studios</label>"
-url = "https://studios.studios.live.hofstadter.io"
+url = "https://studios.hofstadter.io"
 weight = 30

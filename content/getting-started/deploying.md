@@ -42,7 +42,7 @@ your application is running.
 Now we can migrate and seed the database with entries using:
 
 ```sh
-hof db seed
+hof db reset
 ```
 
 Once this is complete,
@@ -66,7 +66,7 @@ hof db reset
 When you want to checkpoint the database, run:
 
 ```sh
-hof db seed
+hof db checkpoint
 ```
 
 

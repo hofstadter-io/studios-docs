@@ -251,7 +251,7 @@ hof db reset
 When you want to checkpoint the database, run:
 
 ```sh
-hof db seed
+hof db checkpoint
 ```
 
 

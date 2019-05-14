@@ -21,7 +21,7 @@ To create a new application from the default, run the following.
 Your application name should only contain lower-case letters and `-` hyphens.
 
 ```sh
-hof app create "<app-name>"
+hof app create "app-name"
 ```
 
 You should see a response that indicates the app was created.
@@ -29,7 +29,7 @@ You should see a response that indicates the app was created.
 Now change to this directory.
 
 ```sh
-cd "<app-name>"
+cd "app-name"
 ```
 
 ##### Pushing, Deploying, and Database
@@ -49,11 +49,13 @@ You can check the status with:
 hof app status
 ```
 
+(It will show the below with errors for a few minutes)
+
 Once you see:
 
 ```sh
-https://<app-name>.<username>.live.hofstadter.io
-<username> <app-name>
+https://app-name.username.live.hofstadter.io
+username app-name
 Client:   running
 Server:   running
 System:   running
@@ -62,7 +64,7 @@ System:   running
 your application is running.
 
 
-Now create the initial users with:
+Now create the initial database with:
 
 ```sh
 hof db reset

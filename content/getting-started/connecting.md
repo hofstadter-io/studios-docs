@@ -13,7 +13,7 @@ You can use the __hof__ tool to manage configurations
 or edit the file directly.
 
 ```sh
-hof config set-context "<context-name>" "<username>" "<apikey>"
+hof config set-context "<context-name>" "<username>" "<apikey>" "https://studios.hofstadter.io"
 ```
 
 - `context-name` can be anything

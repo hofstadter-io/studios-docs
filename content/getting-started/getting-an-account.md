@@ -7,8 +7,8 @@ type: "page"
 weight: 1
 ---
 
-During the __Beta__ phase, please fill out the
-<b>[google form](https://docs.google.com/forms/d/e/1FAIpQLSc713j0GII9tqUYY31HTflSlMypbimJinb_-5hVJV4OInRqAw/viewform)</b>.
+Create a new account at [https://studios.hofstadter.io/register](https://studios.hofstadter.io/register)
+You will be able to signup with email, Google, or GitHub.
 
 You will get an email when your account is setup.
 If you have any questions, please reach out to

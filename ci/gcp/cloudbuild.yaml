@@ -1,7 +1,7 @@
 substitutions:
   _HOF_ENV: "develop"
   _HUGO_VERSION: "0.56.0-ext"
-  _WEBSITE_URL: "https://draft.hofstadter.io/"
+  _WEBSITE_URL: "https://docs.hofstadter.io/"
 
 steps:
 

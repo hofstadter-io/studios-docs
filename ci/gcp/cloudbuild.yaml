@@ -7,19 +7,8 @@ steps:
   args: ['--baseURL', 'https://docs.hofstadter.io', '-d', 'dist']
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'build', '-t', 'gcr.io/hof-io--system/docs.hofstadter.io:$BRANCH_NAME', '.' ]
+  args: [ 'build', '-t', 'us.gcr.io/$PROJECT_ID/docs.hofstadter.io:$BRANCH_NAME', '.' ]
 
 - name: 'gcr.io/cloud-builders/docker'
-  args: [ 'push', 'gcr.io/hof-io--system/docs.hofstadter.io:$BRANCH_NAME' ]
-
-- name: gcr.io/cloud-builders/curl
-  entrypoint: 'bash'
-  args: [ '-c', 'cat ci/k8s/deployment-template.yaml | sed -e "s/__BRANCH__/$BRANCH_NAME/" -e "s/__SHA__/$SHORT_SHA/" > ci/k8s/deployment.yaml']
-
-- name: 'gcr.io/cloud-builders/kubectl'
-  args: [ 'apply', '-f', 'ci/k8s/deployment.yaml']
-  env:
-    - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
-    - 'CLOUDSDK_CONTAINER_CLUSTER=dev-1'
-    - 'CLOUDSDK_CORE_PROJECT=hof-io--system'
+  args: [ 'push', 'us.gcr.io/$PROJECT_ID/docs.hofstadter.io:$BRANCH_NAME' ]
 
